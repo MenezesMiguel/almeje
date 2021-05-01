@@ -14,14 +14,14 @@ function Login(){
                             <Form.Label>Atlas deseja Boas Vindas!</Form.Label>
                             <Form.Control type="email" placeholder="email@email.com" />
                         </Form.Group>
-                        <Form.Group controlId="formBasicPassword">
+
                             <Form.Control type="password" placeholder="Senha" />
-                        </Form.Group>
+
                         <Nav defaultActiveKey="/home" className="flex-column">
                             <Nav.Link href="/home">Esqueci a senha</Nav.Link>
-                            <Nav.Link eventKey="/cadastro">Não sou cadastrado</Nav.Link>
+                            <Nav.Link href="/cadastro">Não sou cadastrado</Nav.Link>
                         </Nav>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" type="submit" href="/home">
                             Login
                         </Button>
                     </div>
