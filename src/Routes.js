@@ -11,6 +11,7 @@ import Perfil from "./Pages/Perfil";
 import Produtos from "./Pages/Produtos"
 import Carrinho from "./Pages/Carrinho"
 import Detalhes from "./Pages/Detalhes"
+import Menu from "./Components/Menu"
 //------------------------------------------------------------------
 
 function Routes(){
@@ -26,6 +27,7 @@ function Routes(){
                 <Route path = "/Produtos" component={Produtos}/>
                 <Route path = "/Carrinho" component={Carrinho}/>
                 <Route path = "/Detalhes" component={Detalhes}/>
+                <Route path = "/menu" component={Menu}/>
             </Switch>
         </BrowserRouter>
     )
