@@ -1,17 +1,28 @@
 import React from "react";
 import "./Cadastro.css";
 import { Form, Button, Col } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 function Cadastro() {
+  const history = useHistory();
+  function Cadastro() {
+    alert("Cadastrado!\n");
+    history.push("login");
+  }
+
   return (
     <div className="pagina">
       <div className="forms">
         <div className="Teste">
           <Form>
+            <Form.Group controlId="name">
+              <Form.Label>Nome Completo</Form.Label>
+              <Form.Control placeholder="Nome completo" />
+            </Form.Group>
             <Form.Row>
-              <Form.Group as={Col} controlId="name">
-                <Form.Label>Nome Completo</Form.Label>
-                <Form.Control placeholder="Nome Completo" />
+              <Form.Group as={Col} controlId="nascimento">
+                <Form.Label>Data de Nascimento</Form.Label>
+                <Form.Control placeholder="DD/MM/AAAA" />
               </Form.Group>
               <Form.Group as={Col} controlId="cpf">
                 <Form.Label>CPF</Form.Label>
@@ -55,7 +66,7 @@ function Cadastro() {
               </Form.Group>
             </Form.Row>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" onClick={Cadastro}>
               Cadastre-se
             </Button>
           </Form>
