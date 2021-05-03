@@ -1,0 +1,19 @@
+.painelInicial {
+    display: flex;
+    flex-direction: column;
+    max-width: 423px;
+    flex-grow: 1;
+}
+.geral{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 5%;
+}

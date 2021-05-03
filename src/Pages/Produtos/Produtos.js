@@ -1,10 +1,12 @@
 import React from "react"
+import { RiLockPasswordLine } from "react-icons/ri";
 
 function Produtos(){
     return(
-        <h1>
-            Produtos
-        </h1>
+        <div>
+            <RiLockPasswordLine />
+        </div>
+
     );
 }
 
