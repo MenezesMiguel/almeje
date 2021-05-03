@@ -1,0 +1,95 @@
+.cabecalho {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoDesk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titles {
+    color: #f27934;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+.img {
+    width: 70px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.links {
+    color: black;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    margin-top: auto;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.links:hover {
+    color: #f27934;
+}
+
+.userName {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.profile:hover {
+    background: #e7e7e7;
+}
+
+.logoMobile {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .logoDesk {
+        display: none;
+    }
+    .links {
+        display: none;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .logoMobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .titles{
+        font-size: 1.3rem;
+    }
+}
