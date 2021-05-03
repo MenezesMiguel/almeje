@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
 //Paginas do site---------------------------------------------------
 import Cadastro from "./Pages/Cadastro";
@@ -11,12 +11,22 @@ import Perfil from "./Pages/Perfil";
 import Produtos from "./Pages/Produtos"
 import Carrinho from "./Pages/Carrinho"
 import Detalhes from "./Pages/Detalhes"
-import Menu from "./Components/Menu"
+import Header from "./Components/Header"
 //------------------------------------------------------------------
 
 function Routes(){
     return(
         <BrowserRouter>
+            <Switch>
+                <Route path = "/" component={header}/>
+            </Switch>
+        </BrowserRouter>
+    )
+}
+
+function header() {
+    return (
+        <Header>
             <Switch>
                 <Route path = "/login" component={Login}/>
                 <Route path = "/home" component={Home}/>
@@ -27,9 +37,9 @@ function Routes(){
                 <Route path = "/Produtos" component={Produtos}/>
                 <Route path = "/Carrinho" component={Carrinho}/>
                 <Route path = "/Detalhes" component={Detalhes}/>
-                <Route path = "/menu" component={Menu}/>
+                <Route component={()=> <Redirect to="/home"/> } />
             </Switch>
-        </BrowserRouter>
+        </Header>
     )
 }
 
