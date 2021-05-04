@@ -1,6 +1,6 @@
 import { AppBar, Menu, MenuItem, Toolbar } from "@material-ui/core";
 import React, { useState } from "react";
-import { MdAccountCircle, MdMenu } from "react-icons/md"
+import { MdMenu } from "react-icons/md"
 import { IconContext } from "react-icons/lib";
 import { useHistory, useLocation } from "react-router";
 import "./Header.css"
@@ -34,36 +34,26 @@ function Header(props){
         <AppBar position="static">
             <Toolbar className="cabecalho">
                 <div className="logoDesk">
-                    <img src="/images/logo.png" alt="logo" onClick={()=>handleClick("/home")}className="img"/>
-                    <h2 className="titles">Atlas</h2>
+                    <img src="/images/Logo.png" alt="logo" onClick={()=>handleClick("/home")} className="imglogo"/>
+                    <img src="/images/Nome.png" alt="nome" className="imgnome"/>
                 </div>
-                <div className="links" onClick={()=>handleClick("/bio")}>SOBRE</div>
-                <div className="links" onClick={()=>handleClick("/comunidades")}>COMUNIDADES</div>
-                <div className="links" onClick={()=>handleClick("/produtos")}>PRODUTOS</div>
-                <div className="links" onClick={()=>handleClick("/carrinho")}>CARRINHO</div>
-                <div onClick={()=>handleClick("/login")} className="profile">
-                    <IconContext.Provider value={{ color: "#343434", size: "2em"}}>
-                        <MdAccountCircle />
-                    </IconContext.Provider>
-                    <p className="userName">Registre-se/Login</p>
-                </div>
-                <div className="logoMobile">
-                <img src="/images/logo.png" alt="logo" onClick={()=>handleClick("/home")}className="img"/>
-                </div>
-                <div className="logoMobile">
-                    <h1 className="titles">{title}</h1>
-                </div>
+                <div className="links" onClick={()=>handleClick("/bio")}>Quem Somos</div>
+                <div className="links" onClick={()=>handleClick("/comunidades")}>Comunidades</div>
+                <div className="links" onClick={()=>handleClick("/produtos")}>Produtos</div>
+                <div className="links" onClick={()=>handleClick("/carrinho")}>Meu Carrinho</div>
+                <div className="links" onClick={()=>handleClick("/login")}>Meu Perfil</div>
+                <h1 className="title">{title}</h1>
                 <div className="menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenu}>
                     <IconContext.Provider value={{ color: "#343434", size: "2em"}}>
                         <MdMenu />
                     </IconContext.Provider>
                 </div>
                 <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-                    <MenuItem onClick={()=>handleClick("/bio")}>Sobre</MenuItem>
+                    <MenuItem onClick={()=>handleClick("/bio")}>Quem Somos</MenuItem>
                     <MenuItem onClick={()=>handleClick("/comunidades")}>Comunidades</MenuItem>
                     <MenuItem onClick={()=>handleClick("/produtos")}>Produtos</MenuItem>
-                    <MenuItem onClick={()=>handleClick("/carrinho")}>Carrinho</MenuItem>
-                    <MenuItem onClick={()=>handleClick("/login")}>Login</MenuItem>
+                    <MenuItem onClick={()=>handleClick("/carrinho")}> Meu Carrinho</MenuItem>
+                    <MenuItem onClick={()=>handleClick("/login")}>Meu Perfil</MenuItem>
                 </Menu>
             </Toolbar>
         </AppBar>

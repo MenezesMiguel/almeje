@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Login.css"
 import { Form, Button, Nav } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
-import { RiLockPasswordLine } from "react-icons/ri"
 
 
 function Login(){
@@ -19,7 +18,6 @@ function Login(){
         <div className="geral">
             <div className="painelInicial">
                 <Form>
-                    <img src="./images/Thankyo.png" alt = "Logo"/>
                     <div className="inputs">
                         <Form.Label>Atlas deseja Boas Vindas!</Form.Label>
                         <Form.Group controlId="email">
