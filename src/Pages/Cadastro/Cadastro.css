@@ -9,6 +9,16 @@
 .forms{
     display: flex;
     justify-content: center;
-    max-width: 50%;
+    max-width: 70%;
     align-items: center;
+}
+.teste{
+    font-family: 'Asap Condensed', sans-serif;     
+    font-weight: 700;
+    margin-top: -10%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #F27934;
+    font-size: 500%;
 }

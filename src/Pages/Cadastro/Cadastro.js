@@ -24,11 +24,10 @@ function Cadastro() {
 
   return (
     <div className="pagina">
-      <div className="frase" color="orange">
+      <div className="teste" color="orange">
         <p>Bem vindo ao Atlas!</p>
       </div>
       <div className="forms">
-        <div className="Teste">
           <Form>
             <Form.Group controlId="name">
               <Form.Label>Nome Completo</Form.Label>
@@ -141,7 +140,6 @@ function Cadastro() {
             </Button>
           </Form>
         </div>
-      </div>
     </div>
   );
 }
