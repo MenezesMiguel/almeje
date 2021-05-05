@@ -20,5 +20,5 @@
     margin-left: 5%;
     margin-right: 5%;
     color: #F27934;
-    font-size: 500%;
+    font-size: min(80px, 15vw);
 }
