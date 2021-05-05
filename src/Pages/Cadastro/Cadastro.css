@@ -2,7 +2,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    background-color: gainsboro;
+    background-image: linear-gradient(#ee905a, white 20%);
     justify-content: center;
 }
 .forms{

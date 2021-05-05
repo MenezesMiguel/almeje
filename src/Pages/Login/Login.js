@@ -14,6 +14,9 @@ function Login() {
   }
   return (
     <div className="geral">
+      <div className="frase" color ="orange">
+        <p>Bem vindo ao Atlas!</p>
+      </div>
       <div className="painelInicial">
         <Form>
           <div className="inputs">
