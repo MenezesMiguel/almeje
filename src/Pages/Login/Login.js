@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css"
+import "./Login.css";
 import { Form, Button, Nav } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 

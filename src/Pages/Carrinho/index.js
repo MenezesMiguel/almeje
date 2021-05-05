@@ -1,1 +1,1 @@
-export {default} from "./Carrinho"
+export {default} from "./Carrinho";

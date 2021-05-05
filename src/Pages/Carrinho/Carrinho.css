@@ -1,0 +1,36 @@
+.titulo{
+    display: flex;
+    color: #000000;
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 42px;
+    line-height: 82,51px;
+    align-items: center;
+    
+}
+.container{
+    align-items: center;
+        
+}
+.paper{
+    font-size: 25px;
+    font-family: 'Asap Condensed', sans-serif;
+    margin-top: 20px;   
+    padding: 2cm;
+    
+}
+.cep{
+    margin-top: 1.5cm;
+    margin-left: 1.5cm;
+    font-size: 30px;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+@media (max-width: 330px){
+    .titulo{
+        font-size: 1.2rem;
+    }
+    .icone{
+        size: 1.2px;
+    }
+
+}

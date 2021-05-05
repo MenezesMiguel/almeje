@@ -21,7 +21,7 @@ function Routes(){
                 <Route path = "/" component={header}/>
             </Switch>
         </BrowserRouter>
-    )
+    );
 }
 
 function header() {
@@ -40,7 +40,7 @@ function header() {
                 <Route component={()=> <Redirect to="/home"/> } />
             </Switch>
         </Header>
-    )
+    );
 }
 
 export default Routes;
