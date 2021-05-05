@@ -1,59 +1,101 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cadastro.css";
 import { Form, Button, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 function Cadastro() {
   const history = useHistory();
+  const [nome, setNome] = useState();
+  const [nascimento, setNascimento] = useState();
+  const [cpf, setCpf] = useState();
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
+  const [endereco, setEndereco] = useState();
+  const [cidade, setCidade] = useState();
+  const [estado, setEstado] = useState();
+  const [cep, setCep] = useState();
+
   function Cadastro() {
-    alert("Cadastrado!\n");
+    alert(
+      "Cadastrado!\n" + nome + "\n" + nascimento + "\n" + cpf + "\n" + email
+    );
     history.push("login");
   }
 
   return (
     <div className="pagina">
+      <div className="frase" color="orange">
+        <p>Bem vindo ao Atlas!</p>
+      </div>
       <div className="forms">
         <div className="Teste">
           <Form>
             <Form.Group controlId="name">
               <Form.Label>Nome Completo</Form.Label>
-              <Form.Control placeholder="Nome completo" />
+              <Form.Control
+                placeholder="Nome completo"
+                onChange={(e) => setNome(e.target.value)}
+              />
             </Form.Group>
             <Form.Row>
               <Form.Group as={Col} controlId="nascimento">
                 <Form.Label>Data de Nascimento</Form.Label>
-                <Form.Control placeholder="DD/MM/AAAA" />
+                <Form.Control
+                  placeholder="DD/MM/AAAA"
+                  onChange={(e) => setNascimento(e.target.value)}
+                />
               </Form.Group>
               <Form.Group as={Col} controlId="cpf">
                 <Form.Label>CPF</Form.Label>
-                <Form.Control placeholder="123.456.789-00" />
+                <Form.Control
+                  placeholder="123.456.789-00"
+                  onChange={(e) => setCpf(e.target.value)}
+                />
               </Form.Group>
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" placeholder="Email@email.com" />
+                <Form.Control
+                  type="email"
+                  placeholder="Email@email.com"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </Form.Group>
               <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Label>Senha</Form.Label>
-                <Form.Control type="password" placeholder="Senha" />
+                <Form.Control
+                  type="password"
+                  placeholder="Senha"
+                  onChange={(e) => setSenha(e.target.value)}
+                />
               </Form.Group>
             </Form.Row>
 
             <Form.Group controlId="formGridAddress1">
               <Form.Label>Endereco</Form.Label>
-              <Form.Control placeholder="Rua abcd, 123" />
+              <Form.Control
+                placeholder="Rua abcd, 123"
+                onChange={(e) => setEndereco(e.target.value)}
+              />
             </Form.Group>
 
             <Form.Row>
               <Form.Group as={Col} controlId="formGridCity">
                 <Form.Label>Cidade</Form.Label>
-                <Form.Control  placeholder = "Cidade"/>
+                <Form.Control
+                  placeholder="Cidade"
+                  onChange={(e) => setCidade(e.target.value)}
+                />
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridState">
                 <Form.Label>Estado</Form.Label>
-                <Form.Control as="select" defaultValue="Selecione">
+                <Form.Control
+                  as="select"
+                  defaultValue="Selecione"
+                  onChange={(e) => setEstado(e.target.value)}
+                >
                   <option>Selecione</option>
                   <option>AC</option>
                   <option>AL</option>
@@ -82,13 +124,15 @@ function Cadastro() {
                   <option>SP</option>
                   <option>SE</option>
                   <option>TO</option>
-
                 </Form.Control>
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridZip">
                 <Form.Label>CEP</Form.Label>
-                <Form.Control  placeholder = "12345-678"/>
+                <Form.Control
+                  placeholder="12345-678"
+                  onChange={(e) => setCep(e.target.value)}
+                />
               </Form.Group>
             </Form.Row>
 
