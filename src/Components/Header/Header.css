@@ -1,0 +1,121 @@
+.cabecalho {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: flex-end;
+}
+
+.logoDesk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 50px;
+    padding: 0;
+}
+
+.imglogo {
+    max-height: 50px;
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+.imgnome {
+    max-height: 40px;
+    width: auto;
+    height: auto;
+}
+
+.title {
+    display: none;
+}
+
+.links {
+    color: #f27934;
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    cursor: pointer;
+    font-family: 'Asap Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.links:hover {
+    text-shadow: 1.5px 1.5px 2px rgb(185, 185, 185);
+}
+
+.userName {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin: 0px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.profile:hover {
+    background: #e7e7e7;
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .links {
+        font-size: 15px;
+    }
+    .imglogo {
+        max-height: 30px;
+        margin-right: 6px;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+    }
+    
+    .imgnome {
+        max-height: 24px;
+        width: auto;
+        height: auto;
+    }
+    
+}
+@media (max-width: 700px) {
+    .logoDesk {
+        display: none;
+    }
+    .links {
+        display: none;
+    }
+
+    .profile {
+        display: none;
+    }
+    .title {
+        display: flex;
+        color: #f27934;
+        font-family: 'Asap Condensed', sans-serif;
+    }
+
+    .menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 330px) {
+
+    .title{
+        font-size: 1.3rem;
+    }
+}
