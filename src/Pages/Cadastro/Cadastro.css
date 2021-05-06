@@ -1,11 +1,4 @@
-.painelInicial {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    flex-grow: 1;
-    width: 40%;
-}
-.geral{
+.pagina {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -13,16 +6,16 @@
     justify-content: center;
     background-image: linear-gradient(rgba(231, 102, 26, 0.19) ,rgba(255, 255, 255, 0) 10%);
 }
-.inputs {
+.forms{
     display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    margin: 10%;
+    justify-content: center;
+    max-width: 70%;
+    align-items: center;
 }
-.frase{
+.teste{
     font-family: 'Asap Condensed', sans-serif;     
     font-weight: 700;
-    margin-top: 2%;
+    margin-top: -10%;
     margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
