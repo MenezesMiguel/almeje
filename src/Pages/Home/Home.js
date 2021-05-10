@@ -1,14 +1,13 @@
-import React from "react";
-import SwipeableTextMobileStepper from "../../Components/Carrossel/CarrosselEventos";
-import "./Home.css"
+import React, { useState } from "react";
+import "./Home.css";
 
 
 function Home(){
     
     return (
         <div className="home">
-                <p className="pageTitle">Home</p>
-            <SwipeableTextMobileStepper />
+            <p className="pageTitle">Home</p>
+            <img src="\images\promocao.jpg" alt="promocao" className="promocao"/>
             <div className="destaques">
                 <div className="produtoDestaque">
                     <div className="tituloDestaque">
@@ -36,7 +35,6 @@ function Home(){
                 </div>
             </div>
             <div className="promocoes">
-            <SwipeableTextMobileStepper />
             </div>
         </div>
     );

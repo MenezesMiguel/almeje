@@ -10,15 +10,14 @@
     color: #f27934;
     font-family: 'Asap Condensed', sans-serif;
     font-size: 72px;
-    margin: 0 0 0 50px;
+    margin: 0;
     justify-content: flex-start;
-    width: 100vw;
+    width: 95vw;
 }
 
 .destaques {
     display: flex;
     flex-direction: row;
-    width: 100vw;
     max-width: 1300px;
     justify-content: space-around;
     margin: 50px 0 50px 0;
