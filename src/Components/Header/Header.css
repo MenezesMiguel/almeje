@@ -70,7 +70,7 @@
     display: none;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 800px) {
     .links {
         font-size: 15px;
     }
@@ -90,7 +90,7 @@
     
 }
 
-@media (max-width: 730px) {
+@media (max-width: 600px) {
     .logoDesk {
         display: none;
     }

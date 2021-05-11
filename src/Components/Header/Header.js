@@ -38,7 +38,6 @@ function Header(props){
                     <img src="/images/Nome.png" alt="nome" className="imgnome"/>
                 </div>
                 <div className="links" onClick={()=>handleClick("/bio")}>Quem Somos</div>
-                <div className="links" onClick={()=>handleClick("/comunidades")}>Comunidades</div>
                 <div className="links" onClick={()=>handleClick("/produtos")}>Produtos</div>
                 <div className="links" onClick={()=>handleClick("/carrinho")}>Meu Carrinho</div>
                 <div className="links" onClick={()=>handleClick("/login")}>Meu Perfil</div>
@@ -51,7 +50,6 @@ function Header(props){
                 </div>
                 <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
                     <MenuItem onClick={()=>handleClick("/bio")}>Quem Somos</MenuItem>
-                    <MenuItem onClick={()=>handleClick("/comunidades")}>Comunidades</MenuItem>
                     <MenuItem onClick={()=>handleClick("/produtos")}>Produtos</MenuItem>
                     <MenuItem onClick={()=>handleClick("/carrinho")}> Meu Carrinho</MenuItem>
                     <MenuItem onClick={()=>handleClick("/login")}>Meu Perfil</MenuItem>
