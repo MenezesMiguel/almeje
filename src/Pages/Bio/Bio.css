@@ -1,0 +1,27 @@
+.baseBio{
+height:100%;
+display: flex;display: flex;
+flex-direction: column;
+background-image: linear-gradient(rgba(231, 102, 26, 0.19),rgba(226, 223, 223, 0.315) 10%);
+
+}
+.bioBaixo{
+    display: flex;
+    flex-direction: row;
+    max-width: 1814px;
+    justify-content: center; 
+    background-color: sienna ;
+} 
+
+.foto{ 
+    align-items: center;
+    justify-content: center;
+    max-width: 914px;
+    flex-grow: 1;
+}
+
+.textos{
+flex-grow: 2;
+    
+    
+}
