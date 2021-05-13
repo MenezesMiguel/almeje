@@ -47,20 +47,16 @@ function Home(){
                     <Carousel.Item>
                         <img
                         className="carrosselImageG"
-                        src="\images\dia_das_maesG.png"
+                        src="\images\loginG.png"
                         alt="Third slide"
                         onClick={()=>handleClick("/login")}
                         />
                         <img
                         className="carrosselImageP"
-                        src="\images\ComunidadesG.png"
+                        src="\images\loginP.png"
                         alt="First slide"
                         onClick={()=>handleClick("/login")}
                         />
-                        <Carousel.Caption>
-                        <h3 className="carrosselTitle">Faça seu login e compre na melhor loja do Brasil.</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
             <p className="subtitle">Lançamentos</p>
@@ -68,7 +64,10 @@ function Home(){
                 <div className="produto">
                     <div className="titulo">
                         <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
-                        <p className="anuncioProduto">Conheça a nova camisa do Morro do Filó</p>
+                        <div className="anuncioProduto">
+                        <p className="tituloAnuncio">Conheça a nova camisa do Morro do Filó</p>
+                        <p className="preco">Por apenas R$9,99</p>
+                        </div>
                     </div>
                     <p className="descricao">
                         O tênis foi elaborado pela família do Roberto, na Vila França. 
@@ -80,7 +79,10 @@ function Home(){
                 <div className="produto">
                     <div className="titulo">
                         <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
-                        <p className="anuncioProduto">Conheça o novo tênis da Vila França</p>
+                        <div className="anuncioProduto">
+                        <p className="tituloAnuncio">Conheça o novo tênis da Vila França</p>
+                        <p className="preco">Por apenas R$9,99</p>
+                        </div>
                     </div>
                     <p className="descricao">
                         O tênis foi elaborado pela família do Roberto, na Vila França. 
@@ -95,7 +97,10 @@ function Home(){
                 <div className="produto">
                     <div className="titulo">
                         <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
-                        <p className="anuncioProduto">Conheça a nova camisa do Morro do Filó</p>
+                        <div className="anuncioProduto">
+                        <p className="tituloAnuncio">Conheça a nova camisa do Morro do Filó</p>
+                        <p className="preco">Por apenas R$9,99</p>
+                        </div>
                     </div>
                     <p className="descricao">
                         O tênis foi elaborado pela família do Roberto, na Vila França. 
@@ -107,7 +112,43 @@ function Home(){
                 <div className="produto">
                     <div className="titulo">
                         <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
-                        <p className="anuncioProduto">Conheça o novo tênis da Vila França</p>
+                        <div className="anuncioProduto">
+                        <p className="tituloAnuncio">Conheça o novo tênis da Vila França</p>
+                        <p className="preco">Por apenas R$9,99</p>
+                        </div>
+                    </div>
+                    <p className="descricao">
+                        O tênis foi elaborado pela família do Roberto, na Vila França. 
+                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
+                        e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
+                        impacto dele para essas pessoas.
+                    </p>
+                </div>
+            </div>
+            <p className="subtitle">Promoções</p>
+            <div className="topicos">
+                <div className="produto">
+                    <div className="titulo">
+                        <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
+                        <div className="anuncioProduto">
+                        <p className="tituloAnuncio">Conheça a nova camisa do Morro do Filó</p>
+                        <p className="preco">De R$15,99<br />Por apenas R$9,99</p>
+                        </div>
+                    </div>
+                    <p className="descricao">
+                        O tênis foi elaborado pela família do Roberto, na Vila França. 
+                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
+                        e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
+                        impacto dele para essas pessoas.
+                    </p>
+                </div>
+                <div className="produto">
+                    <div className="titulo">
+                        <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
+                        <div className="anuncioProduto">
+                        <p className="tituloAnuncio">Conheça o novo tênis da Vila França</p>
+                        <p className="preco">De R$15,99<br />Por apenas R$9,99</p>
+                        </div>
                     </div>
                     <p className="descricao">
                         O tênis foi elaborado pela família do Roberto, na Vila França. 

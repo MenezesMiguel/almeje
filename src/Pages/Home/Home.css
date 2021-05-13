@@ -69,10 +69,19 @@
     min-width: 500px;
 }
 
-.anuncioProduto {
+.tituloAnuncio {
     font-family: 'Asap Condensed', sans-serif;
     font-size: 30px;
     color: #f27934;
+}
+
+.preco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw 0 0 0;
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 25px;
 }
 
 .imgProduto {
@@ -130,7 +139,6 @@
     .produto {
         width: 90vw;
         margin: 10px 0;
-    
     }
     
     .titulo {
@@ -140,10 +148,16 @@
         width: 90vw;
     }
     
-    .anuncioProduto {
+    .tituloAnuncio {
         font-size: 20px;
+        margin-bottom: 8px;
     }
     
+    .preco {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
     .imgProduto {
         max-width: 30vw;
     }
@@ -154,8 +168,12 @@
         font-size: 30px;
     }
 
-    .anuncioProduto {
-        font-size: 15px;
+    .tituloAnuncio {
+        font-size: 13px;
+    }
+
+    .preco {
+        font-size: 12px;
     }
 
     .descricao {

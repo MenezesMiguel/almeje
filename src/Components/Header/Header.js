@@ -49,10 +49,10 @@ function Header(props){
                     </IconContext.Provider>
                 </div>
                 <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
-                    <MenuItem onClick={()=>handleClick("/bio")}>Quem Somos</MenuItem>
-                    <MenuItem onClick={()=>handleClick("/produtos")}>Produtos</MenuItem>
-                    <MenuItem onClick={()=>handleClick("/carrinho")}> Meu Carrinho</MenuItem>
-                    <MenuItem onClick={()=>handleClick("/login")}>Meu Perfil</MenuItem>
+                    <MenuItem classes={{root: 'menuItem'}} onClick={()=>handleClick("/bio")}>Quem Somos</MenuItem>
+                    <MenuItem classes={{root: 'menuItem'}} onClick={()=>handleClick("/produtos")}>Produtos</MenuItem>
+                    <MenuItem classes={{root: 'menuItem'}} onClick={()=>handleClick("/carrinho")}> Meu Carrinho</MenuItem>
+                    <MenuItem classes={{root: 'menuItem'}} onClick={()=>handleClick("/login")}>Meu Perfil</MenuItem>
                 </Menu>
             </Toolbar>
         </AppBar>
