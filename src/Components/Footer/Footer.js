@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router";
 import { IconContext } from "react-icons/lib";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
@@ -37,10 +38,10 @@ function Footer() {
             <div className="quickLinks">
                 <p className="principal">Acesso rápido</p>
                 <ul>
-                    <li className="link" onClick={()=>handleClick("/home")}>Home</li>
-                    <li className="link" onClick={()=>handleClick("/login")}>Login</li>
-                    <li className="link" onClick={()=>handleClick("/produtos")}>Produtos</li>
-                    <li className="link" onClick={()=>handleClick("/bio")}>Quem Somos</li>
+                    <li><Link className="link" to="/home">Home</Link></li>
+                    <li><Link className="link" to="/login">Login</Link></li>
+                    <li><Link className="link" to="/produtos">Produtos</Link></li>
+                    <li><Link className="link" to="/bio">Quem Somos</Link></li>
                 </ul>
             </div>
         </div>

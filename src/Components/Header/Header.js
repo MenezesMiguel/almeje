@@ -50,7 +50,7 @@ function Header(props){
                 <Link className="links" to="/produtos">Produtos</Link>
                 <Link className="links" to="/carrinho">Meu Carrinho</Link>
                 <Link className="links" to="/login">Meu Perfil</Link>
-                <img src="/images/Logo.png" alt="logo" onClick={()=>handleClick("/home")} className="imglogomobile"/>
+                <Link to="/home"><img src="/images/Logo.png" alt="logo" className="imglogomobile"/></Link>
                 <h1 className="title">{title}</h1>
                 <div className="menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenu}>
                     <IconContext.Provider value={{ color: "#343434", size: "2em"}}>
