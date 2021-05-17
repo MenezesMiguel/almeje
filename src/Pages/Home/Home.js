@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
 import { useHistory } from "react-router";
-import Footer from "../../Components/Footer"
 import "./Home.css";
 
 
@@ -15,7 +14,6 @@ function Home(){
     
     return (
         <div className="home">
-            <p className="pageTitle">Home</p>
                 <Carousel interval={10000} className="carrossel" nextIcon={<span className="carousel-control-next-icon"/>}>
                     <Carousel.Item>
                         <img
