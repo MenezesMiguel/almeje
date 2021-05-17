@@ -1,34 +1,40 @@
 import React from "react"
 import "./Bio.css";
 
+
 function Bio(){
     return (
+        
         <div className="baseBio">
             <div className="QSTitle">
-                <h1>Quem somos</h1> 
+                <h1 className="QSTitle1">QUEM SOMOS</h1> 
             </div>
             <div className="QSBaixo">
-                <div className="foto">
-                    <img src={"/images/Quem_somos.jpg"} alt="Quem somos"></img>
-                </div>
-                <div className="textos">
-                    <div>
-                    <h1>Sucessos dos Parceiros</h1>
-                    <text>Somos uma empresa que tem como principal objetivo dar visibilidade e empoderar o trabalho feito nas periferias. Para isso, construimos diversas parcerias com comunidades carentes, nas quais capacitamos  famílias para trabalharem com artigos esportivos.</text>
-                    </div>
-                    <div>
-                    <h1>De onde Viemos</h1>
-                    <text>De um grupo de estudantes em um desafio na faculdade surgiu uma paixão e um modelo de negócio que não para de crescer. Somos um grupo diverso de alunos da UFMG, apaixonados por esportes e que entendeu que é possível mudar a realidade das pessoas através dele.</text>
-                    </div>
+                
+                    <img className="QSFoto" src={"/images/Equipe.png"} alt="Quem somos"></img>
+                
+                <div className="QSTextos">
+                        {/* <h1 className="titles">Sucessos dos Parceiros</h1> */}
+                        <p className="textos">
+                            De um grupo de estudantes em um desafio na faculdade surgiu uma paixão 
+                            e um modelo de negócio que não para de crescer. Somos um grupo diverso 
+                            de alunos da UFMG, apaixonados por esportes e que entendeu que é possível 
+                            mudar a realidade das pessoas através dele.<br/>
+                            Durante todo esse tempo então nos consolidamos como uma empresa que tem como principal objetivo dar visibilidade 
+                            e empoderar o trabalho feito nas periferias. Para isso, construimos 
+                            diversas parcerias com comunidades carentes, nas quais capacitamos  
+                            famílias para trabalharem com artigos esportivos.
+                        </p>
                 </div>
             </div>
-            <div className="comunidadesTitle">
-                <h1>comunidades</h1>
-            </div>
+            <p className="comunidadesTitle">
+                COMUNIDADES ABRAÇADAS
+            </p>
+            
             <div className="comunidadesBase">
                 <div className="comunidades">
                     <div className="comunidadesInfo">
-                        <p className="comunidadesName">Serra - Belho Horizonte/MG</p>
+                        <p className="comunidadesName">Serra - Belo Horizonte/MG</p>
                         <p className="comunidadesSobre">
                             O Aglomerado da Serra é a maior favela de Minas Gerais,
                             localizada em Belo Horizonte, mais precisamente na zona sul da capital.
@@ -49,12 +55,12 @@ function Bio(){
                         </p>
                     </div>
                     <div className="comunidadesImg">
-                        <img src={"/images/Serra.jpeg"} alt="Serra"></img>
+                        <img className="comunidadesFotos" src={"/images/Serra.jpg"} alt="Serra"></img>
                     </div>  
                 </div>
-                <div className="comunidades">
+                <div className="comunidades1">
                     <div>
-                        <img src={"/images/Rocinha.jpg"} alt="Rocinha"></img>
+                        <img className="comunidadesFotos" src={"/images/Rocinha.jpg"} alt="Rocinha"></img>
                     </div>
                     <div classname="rocinhaTxt">
                         <p className="comunidadesName">
@@ -92,19 +98,21 @@ function Bio(){
                             Rua Coronel Silva Castro e Rua Cônego Xavier (Hospital Heliópolis),
                             onde estão localizados os pontos de ônibus.Heliópolis também fica próxima
                             à linha verde do metrô (Estação Sacomã) e às principais vias de acesso de
-                            São Paulo, como a Rodovia Anchieta e Avenida do Estado[2]. Dista apenas
+                            São Paulo, como a Rodovia Anchieta e Avenida do Estado. Dista apenas
                             8 km do centro de São Paulo. Esses fatores contribuíram para seu rápido
                             crescimento populacional.
                         </p>
                     </div>
                     <div>
-                        <img src={"/images/Heliópolis.jpg"} alt="Heliópolis"></img>
+                        <img className="comunidadesFotos"src={"/images/Heliópolis.jpg"} alt="Heliópolis"></img>
                     </div>
                 </div>
             </div>
+
         </div>
     
     );
 }
 
 export default Bio;
+
