@@ -53,8 +53,14 @@
     font-weight: 700 !important;
 }
 
+.menuItem:hover {
+    text-decoration: none;
+}
+
 .links:hover {
     text-shadow: 1.5px 1.5px 2px rgb(185, 185, 185);
+    text-decoration: none;
+    color: #f27934;
 }
 
 .profile {
