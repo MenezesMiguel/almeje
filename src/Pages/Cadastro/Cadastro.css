@@ -15,10 +15,9 @@
 .teste{
     font-family: 'Asap Condensed', sans-serif;     
     font-weight: 700;
-    margin-top: -10%;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 5%;
     color: #F27934;
     font-size: min(80px, 15vw);
+}
+@media (max-height: 700px){
 }
