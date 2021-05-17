@@ -12,6 +12,7 @@ import Produtos from "./Pages/Produtos"
 import Carrinho from "./Pages/Carrinho"
 import Detalhes from "./Pages/Detalhes"
 import Header from "./Components/Header"
+import Footer from "./Components/Footer"
 //------------------------------------------------------------------
 
 function Routes(){
@@ -35,10 +36,11 @@ function header() {
                 <Route path = "/comunidades" component={Comunidades}/>
                 <Route path = "/perfil" component={Perfil}/>
                 <Route path = "/Produtos" component={Produtos}/>
-                <Route path = "/Carrinho" component={Carrinho}/>
-                <Route path = "/Detalhes" component={Detalhes}/>
+                <Route path = "/carrinho" component={Carrinho}/>
+                <Route path = "/detalhes" component={Detalhes}/>
                 <Route component={()=> <Redirect to="/home"/> } />
             </Switch>
+            <Footer/>
         </Header>
     )
 }

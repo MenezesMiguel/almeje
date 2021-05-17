@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel'
 import { useHistory } from "react-router";
+import Footer from "../../Components/Footer"
 import "./Home.css";
 
 

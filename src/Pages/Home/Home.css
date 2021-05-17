@@ -2,7 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient(rgba(231, 102, 26, 0.19) ,rgba(226, 223, 223, 0.315) 10%);
+    background-image: linear-gradient(
+        rgba(231, 102, 26, 0.19),
+        rgba(226, 223, 223, 0.315) 10%
+    );
 }
 
 .pageTitle {
@@ -12,7 +15,7 @@
     font-size: 72px;
     margin: 0;
     justify-content: flex-start;
-    width: 95vw;
+    width: 90vw;
 }
 
 .subtitle {
@@ -24,12 +27,14 @@
 
 .carrossel {
     width: 90vw;
-    background-color:rgba(226, 223, 223, 1);
+    max-width: 1500px;
+    background-color: rgba(226, 223, 223, 1);
 }
 
 .carrosselImageG {
     display: flex;
     width: 90vw;
+    max-width: 1500px;
     height: auto;
     cursor: pointer;
 }
@@ -47,6 +52,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     width: 95vw;
+    justify-content: space-around;
 }
 
 .produto {
@@ -105,6 +111,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 90vw;
     }
 
     .produto {
@@ -124,7 +131,7 @@
         height: auto;
         cursor: pointer;
     }
-    
+
     .produto {
         flex-direction: column;
         width: 500px;
@@ -140,19 +147,19 @@
         width: 90vw;
         margin: 10px 0;
     }
-    
+
     .titulo {
         display: flex;
         flex-direction: flex;
         min-width: 0px;
         width: 90vw;
     }
-    
+
     .tituloAnuncio {
         font-size: 20px;
         margin-bottom: 8px;
     }
-    
+
     .preco {
         font-size: 18px;
         margin-top: 0;
@@ -168,6 +175,10 @@
         font-size: 30px;
     }
 
+    .imgProduto {
+        max-width: 25vw;
+    }
+
     .tituloAnuncio {
         font-size: 13px;
     }
@@ -178,5 +189,6 @@
 
     .descricao {
         font-size: 0.6em;
+        margin: 0 5px;
     }
 }
