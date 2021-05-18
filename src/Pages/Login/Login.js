@@ -50,7 +50,7 @@ function Login() {
             </div>
           </Form>
         </div>
-      </div> //teste
+      </div>{" "}
     </div>
   );
 }
