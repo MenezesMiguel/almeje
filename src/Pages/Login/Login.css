@@ -1,3 +1,15 @@
+.image{
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    height: max-content;
+    flex-grow: 1;
+    width: 90%;
+}
+.logo{
+    max-height: 50%;
+    max-width: 50%;
+}
 .painelInicial {
     display: flex;
     flex-direction: column;
@@ -23,9 +35,47 @@
     font-family: 'Asap Condensed', sans-serif;     
     font-weight: 700;
     margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 0%;
     margin-left: 5%;
     margin-right: 5%;
     color: #F27934;
     font-size: min(80px, 15vw);
+}
+.btn-primary {
+    background-color: #F27934 !important;
+    border-color: #F27934 !important;
+}
+.teste2{
+    width: 90% !important;
+    height: 90% !important;
+    background-color: black !important;
+}
+.nav-link {
+    padding-left: 0px !important;
+}
+@media (max-width: 600px){
+    .frase {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .image {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+
+    }
+    .merda{
+        width: 90% !important;
+        height: 90% !important;
+    }
+    .painelInicial{
+        width: 90%;
+        height: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-link {
+        font-size: 14px;
+    }
 }
