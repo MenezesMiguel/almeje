@@ -1,36 +1,198 @@
 .titulo{
     display: flex;
-    color: #000000;
+    color: #f27934;
     font-family: 'Asap Condensed', sans-serif;
     font-size: 42px;
     line-height: 82,51px;
-    align-items: center;
-    
+    align-items: center;  
+    width: 100%;
+    max-width: fit-content;
+    margin-left: 1cm;
+    margin-top: 0.5cm;
 }
-.container{
-    align-items: center;
-        
+.cointainer{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;   
 }
-.paper{
-    font-size: 25px;
-    font-family: 'Asap Condensed', sans-serif;
-    margin-top: 20px;   
-    padding: 2cm;
-    
+.produto{
+    display: flex;
+    width: 50%;
+    max-width: 50%;
+    border-width: 1px;
+    border-color: rgb(102, 101, 101);
+    border-style: solid;
+    border-radius: 5px;
+    background-color:rgb(255, 251, 251); 
+}
+.fotoproduto{
+    display:flex;
+    max-width: 231px;
+    max-height: 191px;
+    width: auto;
+    height: auto;
+}
+.nomeproduto{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 300px;
+    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    align-items: center;  
+}
+.infos{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.deletebutton{
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 2.5cm;
+}
+.descritivo{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 0.5cm;
+    padding: 10px;
+}
+.preços{
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+}
+.preço1{
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    color: #e32b2bd8;
+    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
+    text-decoration-line: line-through;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.preço2{
+    white-space: nowrap;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
+    color: #767667ef;
+    font-size: 17px;
 }
 .cep{
+    display:flex;
+    align-items: center;
     margin-top: 1.5cm;
     margin-left: 1.5cm;
-    font-size: 30px;
-    font-family: 'Asap Condensed', sans-serif;
+    font-size: 25px;
+    font-family: 'Asap Condensed', sans-serif;  
+}
+.finalização{
+    display: flex;
+    margin-left: 6cm;
+    align-items: baseline;  
+}
+.botaosty {
+    display: inline-flex;
+    border: none;
+	background: #2b2b2b;
+    width: 400px;
+	color: #ffffff !important;
+	padding: 20px;
+	text-transform: uppercase;
+	border-radius: 6px;
+	transition: all 0.3s ease 0s;
+    font-weight: bold;
+    text-align: left;
+}
+.botaosty:hover {
+	color: #f27934 !important;
+	font-weight: 700 !important;
+	letter-spacing: 3px;
+	background: none;
+	-webkit-box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
+        box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
+	-moz-box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
+        box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
+	transition: all 0.3s ease 0s;
 }
 
+
+@media (max-width: 1156px){             
+    .finalização{
+        margin-left: 3cm;
+    } 
+    .produto{
+        display: flex;
+        width: 100%;
+        max-width: 100%; 
+    }   
+}
+@media (max-width: 1060px){             /* quando a tela chega nesse tamnho, o botão finalizar e o resumo passa para baixo do descritivo */
+    .cointainer{                        /* deixando de ser row para ser column */
+        display: flex;
+        flex-direction: column;
+        padding: 30px;   
+    }
+    .finalização{
+        display: flex;
+        margin-left: 0.5cm;
+        margin-top: 0.5cm;
+        width: fit-content; 
+        padding: 5px;
+    }
+    .botaosty {
+        display: inline-flex;
+        width: 250px;
+    }
+    
+}
 @media (max-width: 330px){
     .titulo{
         font-size: 1.2rem;
     }
-    .icone{
-        size: 1.2px;
+    .produto{
+        padding: 1px;
     }
-
+}
+@media (max-width: 580px){
+    .nomeproduto{
+        font-size: 1.2rem;
+    }
+    .preço1{
+        font-size: 13px;
+    }
+    .preço2{
+        font-size: 15px;
+    }
+    .descritivo{
+        font-size: 13px;
+    }
+    .produto{
+        padding: 1px;
+    }
+}
+@media (max-width: 545px){
+    .nomeproduto{
+        font-size: 1.0rem;
+    }
+    .preço1{
+        font-size: 12px;
+    }
+    .preço2{
+        font-size: 14px;
+    }
+    .descritivo{
+        font-size: 1px;
+    }
+    .produto{
+        padding: 1px;
+    }
 }

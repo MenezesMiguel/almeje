@@ -1,55 +1,69 @@
 import React from "react";
 import "./Carrinho.css";
-import { useHistory } from "react-router";
-import { IconContext } from "react-icons";
-import {RiShoppingCartLine} from "react-icons/ri";
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import { TextField } from "@material-ui/core";
-import Button from '@material-ui/core/Button';
-
-
-
-
-
-export default function Carrinho() {
-    let titulo;
-    titulo = "Carrinho";
-    const history = useHistory; 
-    let produto;
-    produto = "Produto";
-
+import { Button, IconButton }  from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
+       
+export default function Carrinho() {        
+    let titulo;       
+    let produto;        /* coloquei as variáveis para visualizaçãomas creio que, com certeza, terá que modificar para ficar de fato funcional */         
+    let cep;                
+    let tamanho;
+    let preço1;
+    let preço2;
+    tamanho = "TAMANHO: 39"
+    titulo = "Seu Carrinho";
+    produto = "Tênis da Vila França";
+    cep = "Calcule seu CEP";
+    preço1 = 'R$ 199,90'
+    preço2 = 'R$ 119,90'
+   
+          
     return (
         <>        
-                <div className = "titulo">
-                    <IconContext.Provider value={{ color: "#000000", size: "42px"}}>
-                        <RiShoppingCartLine/>
-                    </IconContext.Provider>
-                    {titulo}            
-                </div> 
-                <div className="cointainer">
-        <Grid container spacing={5}
-            justify="center"
-            alignItems="center">
-            <Grid className = "item" item xs={11}>
-                <Paper className = "paper">
-                    {produto}
-                
-                </Paper>        
-            </Grid>   
-                <Grid className = "item" item xs={11}>
-                    <Paper className = "paper">Produto</Paper>
-                </Grid>
-        </Grid>
-            <form className = "cep">
-                <h3>Calcule seu CEP</h3>
+            <div className = "titulo">
+                {titulo}
+            </div>
+
+            <div className = "cointainer">              {/* div para compreender todos os elementos, utilizei ela essencialmente para  */}
+                <div className = "produto">             {/* "partir" a tela entre o descritivo dos produtos e o resumo do pedido */}
+                    <div className = "fotoproduto">
+                        <img src="/images/tenis.png" alt="tenis" className="tenis"/>
+                    </div>
+                    <div className = "infos">                               
+                        <div className = "descritivo">
+                            <div className = "nomeproduto">{produto}</div>               
+                            <div className = "detalhes">{tamanho}</div>   
+                        </div>
+                        <aside className = "preços">
+                            <div className = 'preço1'>{preço1}</div>
+                            <div className = 'preço2'>{preço2}</div>
+                        </aside>
+                        <div className = "deletebutton">
+                            <IconButton  aria-label="delete">
+                                <DeleteIcon />
+                            </IconButton>
+                        </div> 
+                    </div> 
+                </div>
+                <aside className = "finalização">                {/* div para o botão finalizar retirado de: https://www.fabriziovanmarciano.com/button-styles/  Button Style E*/}         
+                    <div class="button_cont" align="center">
+                        <a class="botaosty" href="pagamento" target="_blank" rel="nofollow noopener"    /* href é o redirecionamento, tem que criar uma página para pagamento */
+                            >FINALIZAR COMPRA
+                        </a>   
+                    </div> 
+                </aside>
+                <div className = "resumo">   
+                    {/* div para o resumo dos produtos: soma dos valores, desconto, valor entrega etc */}
+                </div>
+            </div>
+        <form className = "cep">
+            {cep}
+            <div>
                 <TextField id="CEP" label="Digite seu CEP" variant="outlined"></TextField> 
-                <Button variant="contained" color="primary" size="large">
-                    Calcular
-                </Button>
-            </form>
-        
-        </div>
+                <Button variant="contained" color="primary" size="medium">Calcular</Button>
+            </div>
+        </form>
     </>
   );
 }
