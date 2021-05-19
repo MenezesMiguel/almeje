@@ -28,6 +28,10 @@
     height: auto;
 }
 
+.imglogomobile {
+    display: none;
+}
+
 .title {
     display: none;
     
@@ -44,16 +48,22 @@
     font-size: 20px;
 }
 
-.links:hover {
-    text-shadow: 1.5px 1.5px 2px rgb(185, 185, 185);
+.menuItem {
+    color: #f27934 !important;
+    font-family: 'Asap Condensed', sans-serif !important;
+    font-weight: 700 !important;
 }
 
-.userName {
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    margin: 0px;
+.menuItem:hover {
+    text-decoration: none;
 }
+
+.links:hover {
+    text-shadow: 1.5px 1.5px 2px rgb(185, 185, 185);
+    text-decoration: none;
+    color: #f27934;
+}
+
 .profile {
     display: flex;
     flex-direction: column;
@@ -73,7 +83,7 @@
     display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     .links {
         font-size: 15px;
     }
@@ -92,7 +102,8 @@
     }
     
 }
-@media (max-width: 700px) {
+
+@media (max-width: 600px) {
     .logoDesk {
         display: none;
     }
@@ -102,6 +113,15 @@
 
     .profile {
         display: none;
+    }
+
+    .imglogomobile {
+        display: flex;
+        max-height: 50px;
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        cursor: pointer;
     }
     .title {
         display: flex;
@@ -114,9 +134,18 @@
     }
 }
 
-@media (max-width: 330px) {
-
+@media (max-width: 430px) {
     .title{
         font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 280px) {
+    .imglogomobile {
+        max-height: 25px;
+    }
+
+    .title{
+        font-size: 0.8rem;
     }
 }

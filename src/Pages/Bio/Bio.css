@@ -1,0 +1,175 @@
+
+/* Componentes do quem somos */
+
+.baseBio{
+/* font-family:'Bebas', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(231, 102, 26, 0.19),rgba(226, 223, 223, 0.315) 10%);
+}
+.QSTitle{
+    padding-top: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+.QSTitle1{
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 60px;
+    padding-bottom: 50px;
+}
+.QSBaixo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+} 
+/* .QSBaixo img{
+    
+} */
+.QSFoto{ 
+    /* padding-left: 20px; */
+    
+    width: 100%;
+    border-radius: 15px;
+    margin: 20px; 
+    border: 1px solid #021a40;
+    height: 100%;
+}
+.QSTextos{
+    display: flex;
+    flex-direction: column;
+    padding-left: -20px;
+    padding-right: 20px;
+    height: 100%;
+}
+.titles{
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+.textos{
+font-size: 25px;
+text-align: justify;
+}
+
+/* Componentes do Comunidades */
+
+.comunidadesTitle{
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 60px;
+    padding-top: 80px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.comunidadesBase{
+    display: flex;
+    flex-direction: column;
+    
+}
+.comunidades, .comunidades1{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.comunidadesName{
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 40px;
+    padding-left: 20px;
+    justify-items: center;
+    text-transform: uppercase;
+}
+.comunidadesSobre{
+    font-size: 25px;
+    text-align: justify;
+    margin: 20px;
+}
+.comunidadesFotos{
+    border-radius: 15px;
+    margin: 20px; 
+    border: 1px solid #021a40;
+ }
+ @media (max-width: 1350px) {
+    .baseBio{
+        height: 150vh;
+    }
+    .QSBaixo{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .QSTitle1{
+        padding-bottom: 20px;
+    }
+    .QSFoto{
+        width: 80vw;
+    }
+    .QSTextos{
+        padding-left: 20px;
+    }
+    .comunidadesTitle{
+        padding-top: 20px;
+    }
+    .comunidades1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .comunidades{
+        display: flex;
+        flex-direction: column;
+    }
+    .comunidadesFotos{  
+        width: 80vw;
+    }
+@media (max-width: 750px){
+    .QSTitle{
+        font-size: 30px;
+        
+    }
+    .QSTitle1{
+        padding-bottom: 0px;
+        font-size: 30px;
+    }
+    .titles{
+        font-size: 30px;
+    }
+    .comunidadesTitle{
+        font-size: 30px;
+        padding-top: 4px;
+    }
+    .comunidadesName{
+        font-size: 30px;
+    }
+    .textos{
+        font-size: 20px;
+    }
+    .comunidadesSobre{
+        font-size: 20px;
+    }
+}
+@media (max-width: 400px){
+    .QSTitle{
+        font-size: 20px;
+    }
+    .titles{
+        font-size: 20px;
+    }
+    .comunidadesName{
+        font-size: 20px;
+    }
+    .textos{
+        font-size: 15px;
+    }
+    .comunidadesSobre{
+        font-size: 15px;
+    }
+}
+
+
+}
