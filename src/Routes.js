@@ -22,7 +22,7 @@ function Routes(){
                 <Route path = "/" component={header}/>
             </Switch>
         </BrowserRouter>
-    )
+    );
 }
 
 function header() {
@@ -42,7 +42,7 @@ function header() {
             </Switch>
             <Footer/>
         </Header>
-    )
+    );
 }
 
 export default Routes;
