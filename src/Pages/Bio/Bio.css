@@ -29,16 +29,15 @@
 } */
 .QSFoto{ 
     /* padding-left: 20px; */
-    
-    width: 100%;
     border-radius: 15px;
     margin: 20px; 
     border: 1px solid #021a40;
-    height: 100%;
+    max-width: 50vw;
 }
 .QSTextos{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding-left: -20px;
     padding-right: 20px;
     height: 100%;
@@ -94,10 +93,11 @@ text-align: justify;
     border-radius: 15px;
     margin: 20px; 
     border: 1px solid #021a40;
+    max-width: 50vw;
  }
  @media (max-width: 1350px) {
     .baseBio{
-        height: 150vh;
+        height: auto;
     }
     .QSBaixo{
         display: flex;
@@ -109,6 +109,7 @@ text-align: justify;
     }
     .QSFoto{
         width: 80vw;
+        max-width: none;
     }
     .QSTextos{
         padding-left: 20px;
@@ -126,6 +127,7 @@ text-align: justify;
     }
     .comunidadesFotos{  
         width: 80vw;
+        max-width: none;
     }
 @media (max-width: 750px){
     .QSTitle{
