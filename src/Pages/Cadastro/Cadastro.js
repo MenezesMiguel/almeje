@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Cadastro.css";
 import { Form, Button, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import api from "../../services/api";
 
 function Cadastro() {
   const history = useHistory();
@@ -9,17 +10,22 @@ function Cadastro() {
   const [nascimento, setNascimento] = useState();
   const [cpf, setCpf] = useState();
   const [email, setEmail] = useState();
-  const [senha, setSenha] = useState();
+  const [password, setPassword] = useState();
   const [endereco, setEndereco] = useState();
   const [cidade, setCidade] = useState();
   const [estado, setEstado] = useState();
   const [cep, setCep] = useState();
 
-  function Cadastro() {
-    alert(
-      "Cadastrado!\n" + nome + "\n" + nascimento + "\n" + cpf + "\n" + email
-    );
-    history.push("login");
+  async function Cadastro(e) {
+    e.preventDefault();
+    try {
+      const response = await api.post('/cadastro', {nome, nascimento, cpf, email, password, endereco, cidade, estado, cep});
+      console.log(response);
+      history.push("login");
+    } catch (error) {
+      console.warn(error);
+      alert(error.message);
+    }
   }
 
   return (
@@ -66,7 +72,7 @@ function Cadastro() {
               <Form.Control
                 type="password"
                 placeholder="Senha"
-                onChange={(e) => setSenha(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
           </Form.Row>
