@@ -2,18 +2,18 @@ import React from "react";
 import "./Carrinho.css";
 import { TextField } from "@material-ui/core";
 import { Button, IconButton }  from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
+// import DeleteIcon from '@material-ui/icons/Delete';
        
 export default function Carrinho() {        
     let titulo;       
-    let produto;        /* coloquei as variáveis para visualizaçãomas creio que, com certeza, terá que modificar para ficar de fato funcional */         
+    let produtos;        /* coloquei as variáveis para visualizaçãomas creio que, com certeza, terá que modificar para ficar de fato funcional */         
     let cep;                
     let tamanho;
     let preço1;
     let preço2;
     tamanho = "TAMANHO: 39"
     titulo = "Seu Carrinho";
-    produto = "Tênis da Vila França";
+    produtos = "Tênis da Vila França";
     cep = "Calcule seu CEP";
     preço1 = 'R$ 199,90'
     preço2 = 'R$ 119,90'
@@ -21,18 +21,18 @@ export default function Carrinho() {
           
     return (
         <>        
-            <div className = "titulo">
+            <div className = "titulot">
                 {titulo}
             </div>
 
             <div className = "cointainer">              {/* div para compreender todos os elementos, utilizei ela essencialmente para  */}
-                <div className = "produto">             {/* "partir" a tela entre o descritivo dos produtos e o resumo do pedido */}
+                <div className = "produtos">             {/* "partir" a tela entre o descritivo dos produtos e o resumo do pedido */}
                     <div className = "fotoproduto">
                         <img src="/images/tenis.png" alt="tenis" className="tenis"/>
                     </div>
                     <div className = "infos">                               
                         <div className = "descritivo">
-                            <div className = "nomeproduto">{produto}</div>               
+                            <div className = "nomeproduto">{produtos}</div>               
                             <div className = "detalhes">{tamanho}</div>   
                         </div>
                         <aside className = "preços">
@@ -41,7 +41,7 @@ export default function Carrinho() {
                         </aside>
                         <div className = "deletebutton">
                             <IconButton  aria-label="delete">
-                                <DeleteIcon />
+                                {/* <DeleteIcon /> */}
                             </IconButton>
                         </div> 
                     </div> 
@@ -67,7 +67,3 @@ export default function Carrinho() {
     </>
   );
 }
-
-
-
-

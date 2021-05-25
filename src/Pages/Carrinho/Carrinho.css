@@ -1,4 +1,4 @@
-.titulo{
+.titulot{
     display: flex;
     color: #f27934;
     font-family: 'Asap Condensed', sans-serif;
@@ -15,7 +15,7 @@
     flex-direction: row;
     padding: 30px;   
 }
-.produto{
+.produtos{
     display: flex;
     width: 50%;
     max-width: 50%;
@@ -129,7 +129,7 @@
     .finalização{
         margin-left: 3cm;
     } 
-    .produto{
+    .produtos{
         display: flex;
         width: 100%;
         max-width: 100%; 
@@ -155,10 +155,10 @@
     
 }
 @media (max-width: 330px){
-    .titulo{
+    .titulot{
         font-size: 1.2rem;
     }
-    .produto{
+    .produtos{
         padding: 1px;
     }
 }
@@ -175,7 +175,7 @@
     .descritivo{
         font-size: 13px;
     }
-    .produto{
+    .produtos{
         padding: 1px;
     }
 }
@@ -192,7 +192,7 @@
     .descritivo{
         font-size: 1px;
     }
-    .produto{
+    .produtos{
         padding: 1px;
     }
 }
