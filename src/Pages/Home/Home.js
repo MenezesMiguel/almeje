@@ -58,69 +58,64 @@ function Home(){
                         />
                     </Carousel.Item>
                 </Carousel>
-            <p className="subtitle">Lançamentos</p>
+            <p className="subtitle">LANÇAMENTOS</p>
             <div className="topicos">
                 <div className="produto">
                     <div className="titulo">
-                        <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
+                        <img src="/images/calça1.png" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
-                        <p className="tituloAnuncio">Conheça a nova camisa do Morro do Filó</p>
-                        <p className="preco">Por apenas R$9,99</p>
+                        <p className="tituloAnuncio">CONHEÇA A NOVA CALÇA DA COMUNIDADE DA SERRA</p>
+                        <p className="preco">Valor  R$99,99</p>
                         </div>
                     </div>
                     <p className="descricao">
-                        O tênis foi elaborado pela família do Roberto, na Vila França. 
-                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
-                        e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
+                        A calça foi elaborada pela artista Roberto Silva, da comunidade da Serra. 
+                        O design feito por ele passou por testes rigorosos de qualidade e conforto. Venha conhecer mais sobre esse produto e o
                         impacto dele para essas pessoas.
                     </p>
                 </div>
                 <div className="produto">
                     <div className="titulo">
-                        <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
+                        <img src="/images/tenis1.jpg" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
-                        <p className="tituloAnuncio">Conheça o novo tênis da Vila França</p>
-                        <p className="preco">Por apenas R$9,99</p>
+                        <p className="tituloAnuncio">CONHEÇA O NOVO TÊNIS DA COMUNIDADE DA SERRA</p>
+                        <p className="preco">Valor R$189,99</p>
                         </div>
                     </div>
                     <p className="descricao">
-                        O tênis foi elaborado pela família do Roberto, na Vila França. 
-                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
-                        e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
-                        impacto dele para essas pessoas.
+                        O tênis foi elaborado por atistas locais em parceria com a empresa de modo que entregasse o melhor de tecnologia para as práticas urbanas e, ao mesmo tempo, estampasse a cultura da comunidade. 
+                        Venha conhecer mais sobre esse produto e o impacto dele para essas pessoas.
                     </p>
                 </div>
             </div>
-            <p className="subtitle">Mais procurados</p>
+            <p className="subtitle">MAIS PROCURADOS</p>
             <div className="topicos">
                 <div className="produto">
                     <div className="titulo">
-                        <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
+                        <img src="/images/short1.jpg" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
-                        <p className="tituloAnuncio">Conheça a nova camisa do Morro do Filó</p>
-                        <p className="preco">Por apenas R$9,99</p>
+                        <p className="tituloAnuncio">SHORTS PARA TREINO DA COMUNIDADE HELIPA</p>
+                        <p className="preco">Por apenas R$59,99</p>
                         </div>
                     </div>
                     <p className="descricao">
-                        O tênis foi elaborado pela família do Roberto, na Vila França. 
-                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
+                        O produto foi sugerido por um grupo de moradoras locais que pediam por mais estilo e praticidade para treinos ao ar livre.
+                        
                         e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
                         impacto dele para essas pessoas.
                     </p>
                 </div>
                 <div className="produto">
                     <div className="titulo">
-                        <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
+                        <img src="/images/tenis2.jpg" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
-                        <p className="tituloAnuncio">Conheça o novo tênis da Vila França</p>
-                        <p className="preco">Por apenas R$9,99</p>
+                        <p className="tituloAnuncio">TÊNIS 12 MOLAS DA COMUNIDADE ROCINHA</p>
+                        <p className="preco">valor R$189,99</p>
                         </div>
                     </div>
                     <p className="descricao">
-                        O tênis foi elaborado pela família do Roberto, na Vila França. 
-                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
-                        e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
-                        impacto dele para essas pessoas.
+                        Um dos itens mais clássicos da cultura entre os jovens da comunidade. o 12 molas volta em uma nova cor para mais
+                        estilo e ostentação durante os bailes, mas também servindo para melhorar os desempenhos no treino.
                     </p>
                 </div>
             </div>
@@ -130,23 +125,21 @@ function Home(){
                     <div className="titulo">
                         <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
-                        <p className="tituloAnuncio">Conheça a nova camisa do Morro do Filó</p>
-                        <p className="preco">De R$15,99<br />Por apenas R$9,99</p>
+                        <p className="tituloAnuncio">CAMISA CLÁSSICA DO MORRO DO FILÓ</p>
+                        <p className="preco">De R$109,99<br />Por apenas R$39,99</p>
                         </div>
                     </div>
                     <p className="descricao">
-                        O tênis foi elaborado pela família do Roberto, na Vila França. 
-                        A produção foi feita por eles e pela família da Jussara, do Adalberto e da Eliana,
-                        e passou por testes rigorosos de qualidade e conforto. Vem conhecer mais sobre esse produto e o
-                        impacto dele para essas pessoas.
+                        Pode parecer uma camisa qualquer, mas carrega consigo uma história de superação. Seu idealizador procurou a Atlas
+                        pedindo ajuda na comunidade. Ao longo do trabalho, José se mostrou um ótimo product designer desenvolveu o projeto da camisa.
                     </p>
                 </div>
                 <div className="produto">
                     <div className="titulo">
                         <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
-                        <p className="tituloAnuncio">Conheça o novo tênis da Vila França</p>
-                        <p className="preco">De R$15,99<br />Por apenas R$9,99</p>
+                        <p className="tituloAnuncio">CAMISA CLÁSSICA DA VILA FRANÇA</p>
+                        <p className="preco">De R$159,99<br />Por apenas R$99,99</p>
                         </div>
                     </div>
                     <p className="descricao">
