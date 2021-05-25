@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import { Form, Button, Nav } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import api from "../../services/api"
 
 const styles = {
   classForm: {
@@ -13,9 +14,16 @@ function Login() {
   const [password, setPassword] = useState();
   const history = useHistory();
 
-  function Login() {
-    alert("Bem vindo!\n" + email + "\n" + password);
-    history.push("home");
+  async function login(e) {
+    e.preventDefault();
+    try {
+      const response = await api.post("/login", {email, password});
+      alert("Bem vindo "+ response.data.user.nome +"!");
+      history.push("home");
+    } catch (error) {
+      console.warn(error);
+      alert(error.message);
+    }
   }
   return (
     <div className="geral">
@@ -44,7 +52,7 @@ function Login() {
               <Nav defaultActiveKey="/home" className="flex-column">
                 <Nav.Link href="/cadastro">Não sou cadastrado</Nav.Link>
               </Nav>
-              <Button variant="primary" onClick={Login}>
+              <Button variant="primary" onClick={login}>
                 Login
               </Button>
             </div>
