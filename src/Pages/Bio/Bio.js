@@ -38,15 +38,10 @@ function Bio(){
                         <p className="comunidadesSobre">
                             O Aglomerado da Serra é a maior favela de Minas Gerais,
                             localizada em Belo Horizonte, mais precisamente na zona sul da capital.
-                            É classificada como a 3º maior favela do Brasil (atrás apenas da Rocinha,
-                            bairro da Zona Sul do Rio de Janeiro, e da Favela do Sol Nascente em Ceilândia no DF)
-                            e se divide em oito vilas: Nossa Senhora da Conceição . Nossa Senhora de Fátima,
-                            Nossa Senhora Aparecida, Santana do Cafezal, Novo São Lucas, Fazendinha, Chácara,
-                            e Marçola. É a maior favela de Minas com 46 mil habitantes na fonte anexa.
-                            Embora os dados do BNDES deem conta de 46 mil habitantes,
-                            é possível encontrar diferentes apontamentos. O site da Prefeitura de Belo Horizonte (PBH),
-                            por exemplo, contém páginas que relatam a população de 34 mil e outras que citam 50 mil
-                            moradores.O Aglomerado da Serra possui economia diversificada e em evolução contínua.
+                            É classificada como a 3º maior favela do Brasil e se divide em oito vilas: Nossa Senhora da Conceição,
+                            Nossa Senhora de Fátima, Nossa Senhora Aparecida, Santana do Cafezal, Novo São Lucas, Fazendinha, Chácara,
+                            e Marçola. É a maior favela de Minas com 46 mil habitantes na fonte anexa. 
+                            O Aglomerado da Serra possui economia diversificada e em evolução contínua.
                             Uma das áreas mais movimentadas, o cruzamento entre as ruas Bandonion, Nossa Senhora
                             de Fátima, Serenata e São Sebastião, reúne lojas de roupas femininas, padaria, sorveterias,
                             supermercado, mercearias, sacolão, drogarias, salões de beleza, mecânica de motos,
@@ -90,17 +85,12 @@ function Bio(){
                             de Sacomã, na Zona Sul da cidade de São Paulo, no Brasil. Composto por catorze
                             glebas, possui mais de 100.000 habitantes em uma área de quase um milhão de
                             metros quadrados, é destacada por ser a maior favela da cidade.
-                            Seus limites são a Avenida Juntas Provisórias e se estende até a divisa
-                            com São Caetano do Sul (delimitada pelo rio Tamanduateí) e a Avenida
-                            Guido Aliberti. O transporte público não entra em algumas ruas da favela,
+                            O transporte público não entra em algumas ruas da favela,
                             pois as mesmas são estreitas, então as pessoas se deslocam até as vias
-                            principais, como a Estrada das Lágrimas, Avenida Almirante Delamare,
-                            Rua Coronel Silva Castro e Rua Cônego Xavier (Hospital Heliópolis),
-                            onde estão localizados os pontos de ônibus.Heliópolis também fica próxima
-                            à linha verde do metrô (Estação Sacomã) e às principais vias de acesso de
-                            São Paulo, como a Rodovia Anchieta e Avenida do Estado. Dista apenas
-                            8 km do centro de São Paulo. Esses fatores contribuíram para seu rápido
-                            crescimento populacional.
+                            principais, como a Estrada das Lágrimas onde estão localizados os pontos de ônibus.
+                            Heliópolis também fica próxima à linha verde do metrô (Estação Sacomã) e às principais
+                            vias de acesso de São Paulo, como a Rodovia Anchieta e Avenida do Estado. Dista apenas
+                            8 km do centro de São Paulo. Esses fatores contribuíram para seu rápido crescimento populacional.
                         </p>
                     </div>
                     <div>

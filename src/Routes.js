@@ -6,7 +6,6 @@ import Cadastro from "./Pages/Cadastro";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import Bio from "./Pages/Bio"
-import Comunidades from "./Pages/Comunidades";
 import Perfil from "./Pages/Perfil";
 import Produtos from "./Pages/Produtos"
 import Carrinho from "./Pages/Carrinho"
@@ -17,6 +16,7 @@ import { isAuthenticated } from "./services/auth";
 //------------------------------------------------------------------
 
 const PrivateRoute = ({component: Component, ...rest}) => {
+    return (
     <Route
         {...rest}
         render={(props) =>
@@ -27,6 +27,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
             )
         }
     />
+    )
 }
 
 function Routes(){
@@ -47,10 +48,9 @@ function header() {
                 <Route path = "/home" component={Home}/>
                 <Route path = "/cadastro" component={Cadastro}/>
                 <Route path = "/bio" component={Bio}/>
-                <Route path = "/comunidades" component={Comunidades}/>
                 <Route path = "/perfil" component={Perfil}/>
                 <Route path = "/Produtos" component={Produtos}/>
-                <Route path = "/carrinho" component={Carrinho}/>
+                <PrivateRoute path = "/carrinho" component={Carrinho}/>
                 <Route path = "/detalhes" component={Detalhes}/>
                 <Route component={()=> <Redirect to="/home"/> } />
             </Switch>
