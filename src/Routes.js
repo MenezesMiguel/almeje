@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
 //Paginas do site---------------------------------------------------
@@ -13,7 +13,21 @@ import Carrinho from "./Pages/Carrinho"
 import Detalhes from "./Pages/Detalhes"
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
+import { isAuthenticated } from "./services/auth";
 //------------------------------------------------------------------
+
+const PrivateRoute = ({component: Component, ...rest}) => {
+    <Route
+        {...rest}
+        render={(props) =>
+            isAuthenticated() ? (
+                <Component {...props} />
+            ) : (
+                <Redirect to={{ pathname: "/login", state: { from: props.location } }}/>
+            )
+        }
+    />
+}
 
 function Routes(){
     return(

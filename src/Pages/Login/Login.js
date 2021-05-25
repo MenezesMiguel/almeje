@@ -3,6 +3,7 @@ import "./Login.css";
 import { Form, Button, Nav } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import api from "../../services/api"
+import { login } from "../../services/auth"
 
 const styles = {
   classForm: {
@@ -14,11 +15,12 @@ function Login() {
   const [password, setPassword] = useState();
   const history = useHistory();
 
-  async function login(e) {
+  async function handleLogin(e) {
     e.preventDefault();
     try {
       const response = await api.post("/login", {email, password});
       alert("Bem vindo "+ response.data.user.nome +"!");
+      login(response.data.accessToken);
       history.push("home");
     } catch (error) {
       console.warn(error);
@@ -52,7 +54,7 @@ function Login() {
               <Nav defaultActiveKey="/home" className="flex-column">
                 <Nav.Link href="/cadastro">Não sou cadastrado</Nav.Link>
               </Nav>
-              <Button variant="primary" onClick={login}>
+              <Button variant="primary" onClick={handleLogin}>
                 Login
               </Button>
             </div>
