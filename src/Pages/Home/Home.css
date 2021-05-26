@@ -54,6 +54,7 @@
     margin: 20px;
     border: 1px #f2793450 solid;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .produto:hover {

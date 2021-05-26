@@ -38,10 +38,10 @@ function Footer() {
             <div className="quickLinks">
                 <p className="principal">Acesso rápido</p>
                 <ul>
-                    <li><Link className="link" to="/home">Home</Link></li>
-                    <li><Link className="link" to="/login">Login</Link></li>
-                    <li><Link className="link" to="/produtos">Produtos</Link></li>
-                    <li><Link className="link" to="/bio">Quem Somos</Link></li>
+                    <li><a className="link" href="/home" targe="carrossel">Home</a></li>
+                    <li><a className="link" href="/login">Login</a></li>
+                    <li><a className="link" href="/produtos">Produtos</a></li>
+                    <li><a className="link" href="/bio">Quem Somos</a></li>
                 </ul>
             </div>
         </div>
