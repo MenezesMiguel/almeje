@@ -1,198 +1,178 @@
-.titulot{
+.carrinho {
     display: flex;
-    color: #f27934;
-    font-family: 'Asap Condensed', sans-serif;
-    font-size: 42px;
-    line-height: 82,51px;
-    align-items: center;  
-    width: 100%;
-    max-width: fit-content;
-    margin-left: 1cm;
-    margin-top: 0.5cm;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-image: linear-gradient(
+        rgba(231, 102, 26, 0.19),
+        rgba(226, 223, 223, 0.315) 10%
+    );
 }
-.cointainer{
+
+.tituloCarrinho {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 60px;
+    color: #f27934;
+    text-align: center;
+}
+
+.produtosCarrinho {
     display: flex;
     flex-direction: row;
-    padding: 30px;   
+    width: 90vw;
+    margin: 20px 0;
+    box-shadow: 10px 5px 5px rgb(100, 100, 100);
 }
-.produtos{
+
+.anuncioProduto {
     display: flex;
-    width: 50%;
-    max-width: 50%;
-    border-width: 1px;
-    border-color: rgb(102, 101, 101);
-    border-style: solid;
-    border-radius: 5px;
-    background-color:rgb(255, 251, 251); 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
-.fotoproduto{
-    display:flex;
-    max-width: 231px;
-    max-height: 191px;
+
+.tituloProduto {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 30px;
+    color: #f27934;
+    text-align: center;
+    width: 80%;
+}
+
+.sobreProduto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+}
+
+.qntdProduto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.qntd {
+    width: 45px;
+    height: 45px;
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.bigIcon {
+    display: flex;
+}
+
+.littleIcon {
+    display: none;
+}
+
+.precoProduto {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 30px;
+    height: 45px;
+    text-align: center;
+}
+
+.finalizacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90vw;
+    margin: 20px 0;
+}
+
+.finalButton {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-Weight: 700;
+    background-color: #f27934;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.finalButton:hover {
+    box-shadow: 2px 2px 5px rgb(100, 100, 100);
+    text-decoration: none;
+    color: white;
+}
+
+.total {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 30px;
+    text-align: center;
     width: auto;
     height: auto;
 }
-.nomeproduto{
-    display:flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 300px;
-    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    align-items: center;  
-}
-.infos{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-}
-.deletebutton{
-    display: inline-flex;
-    width: fit-content;
-    height: fit-content;
-    margin-left: 2.5cm;
-}
-.descritivo{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    margin-left: 0.5cm;
-    padding: 10px;
-}
-.preços{
-    display: flex;
-    align-items: initial;
-    flex-direction: column;
-    height: fit-content;
-    width: fit-content;
-}
-.preço1{
-    width: fit-content;
-    height: fit-content;
-    white-space: nowrap;
-    color: #e32b2bd8;
-    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
-    text-decoration-line: line-through;
-    font-size: 15px;
-    margin-right: 5px;
-}
-.preço2{
-    white-space: nowrap;
-    width: fit-content;
-    height: fit-content;
-    font-family: 'AdihausDIN', Arial, Helvetica, sans-serif;
-    color: #767667ef;
-    font-size: 17px;
-}
-.cep{
-    display:flex;
-    align-items: center;
-    margin-top: 1.5cm;
-    margin-left: 1.5cm;
-    font-size: 25px;
-    font-family: 'Asap Condensed', sans-serif;  
-}
-.finalização{
-    display: flex;
-    margin-left: 6cm;
-    align-items: baseline;  
-}
-.botaosty {
-    display: inline-flex;
-    border: none;
-	background: #2b2b2b;
-    width: 400px;
-	color: #ffffff !important;
-	padding: 20px;
-	text-transform: uppercase;
-	border-radius: 6px;
-	transition: all 0.3s ease 0s;
-    font-weight: bold;
-    text-align: left;
-}
-.botaosty:hover {
-	color: #f27934 !important;
-	font-weight: 700 !important;
-	letter-spacing: 3px;
-	background: none;
-	-webkit-box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
-        box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
-	-moz-box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
-        box-shadow: 0px 5px 40px -10px rgb(255, 81, 0);
-	transition: all 0.3s ease 0s;
-}
 
+@media (max-width: 500px) {
+    .tituloProduto {
+        font-size: 18px;
+    }
 
-@media (max-width: 1156px){             
-    .finalização{
-        margin-left: 3cm;
-    } 
-    .produtos{
-        display: flex;
-        width: 100%;
-        max-width: 100%; 
-    }   
-}
-@media (max-width: 1060px){             /* quando a tela chega nesse tamnho, o botão finalizar e o resumo passa para baixo do descritivo */
-    .cointainer{                        /* deixando de ser row para ser column */
-        display: flex;
-        flex-direction: column;
-        padding: 30px;   
+    .qntd {
+        width: 20px;
+        height: 30px;
+        font-size: 18px;
     }
-    .finalização{
-        display: flex;
-        margin-left: 0.5cm;
-        margin-top: 0.5cm;
-        width: fit-content; 
-        padding: 5px;
+
+    .bigIcon {
+        display: none;
     }
-    .botaosty {
-        display: inline-flex;
-        width: 250px;
+
+    .littleIcon {
+        display: flex;
     }
     
-}
-@media (max-width: 330px){
-    .titulot{
-        font-size: 1.2rem;
+    .precoProduto {
+        font-size: 18px;
+        height: 30px;
     }
-    .produtos{
-        padding: 1px;
+
+    .finalButton {
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 5px;
     }
-}
-@media (max-width: 580px){
-    .nomeproduto{
-        font-size: 1.2rem;
-    }
-    .preço1{
-        font-size: 13px;
-    }
-    .preço2{
-        font-size: 15px;
-    }
-    .descritivo{
-        font-size: 13px;
-    }
-    .produtos{
-        padding: 1px;
+
+    .total {
+        font-size: 22px;
     }
 }
-@media (max-width: 545px){
-    .nomeproduto{
-        font-size: 1.0rem;
-    }
-    .preço1{
-        font-size: 12px;
-    }
-    .preço2{
+
+@media (max-width: 280px){
+    .tituloProduto {
         font-size: 14px;
     }
-    .descritivo{
-        font-size: 1px;
+
+    .qntd {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
     }
-    .produtos{
-        padding: 1px;
+
+    .precoProduto {
+        font-size: 14px;
+        height: 20px;
+    }
+
+    .finalButton {
+        font-size: 14px;
+        padding: 2px;
+        border-radius: 2px;
+    }
+
+    .total {
+        font-size: 16px;
     }
 }

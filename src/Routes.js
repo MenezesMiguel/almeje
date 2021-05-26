@@ -15,7 +15,7 @@ import Footer from "./Components/Footer"
 import { isAuthenticated } from "./services/auth";
 //------------------------------------------------------------------
 
-const PrivateRoute = ({component: Component, ...rest}) => {
+const PrivateRouteCarrinho = ({component: Component, ...rest}) => {
     return (
     <Route
         {...rest}
@@ -25,7 +25,7 @@ const PrivateRoute = ({component: Component, ...rest}) => {
             ) : (
                 <Redirect
                     to={{ pathname: "/login", state: { from: props.location }}}
-                    onChange={alert("Você precisa estar logado para acessar seu carrinho")}
+                    onChange={alert("Faça login antes de começar a comprar.")}
                 />
             )
         }
@@ -53,7 +53,7 @@ function header() {
                 <Route path = "/bio" component={Bio}/>
                 <Route path = "/perfil" component={Perfil}/>
                 <Route path = "/Produtos" component={Produtos}/>
-                <PrivateRoute path = "/carrinho" component={Carrinho}/>
+                <PrivateRouteCarrinho path = "/carrinho" component={Carrinho}/>
                 <Route path = "/detalhes" component={Detalhes}/>
                 <Route component={()=> <Redirect to="/home"/> } />
             </Switch>

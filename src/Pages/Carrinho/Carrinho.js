@@ -1,69 +1,158 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Carrinho.css";
-import { TextField } from "@material-ui/core";
-import { Button, IconButton }  from '@material-ui/core';
-// import DeleteIcon from '@material-ui/icons/Delete';
+import { IconContext } from "react-icons/lib";
+import { BsPlusSquare, BsDashSquare } from "react-icons/bs";
        
-export default function Carrinho() {        
-    let titulo;       
-    let produtos;        /* coloquei as variáveis para visualizaçãomas creio que, com certeza, terá que modificar para ficar de fato funcional */         
-    let cep;                
-    let tamanho;
-    let preço1;
-    let preço2;
-    tamanho = "TAMANHO: 39"
-    titulo = "Seu Carrinho";
-    produtos = "Tênis da Vila França";
-    cep = "Calcule seu CEP";
-    preço1 = 'R$ 199,90'
-    preço2 = 'R$ 119,90'
-   
-          
-    return (
-        <>        
-            <div className = "titulot">
-                {titulo}
-            </div>
+export default function Carrinho() {
+    const [quantity1, setQuantity1] = useState(0);
+    const preco1 = 40;
+    const [quantity2, setQuantity2] = useState(0);
+    const preco2 = 60;
+    const [quantity3, setQuantity3] = useState(0);
+    const preco3 = 190;
+    const [total, setTotal] = useState(0);
 
-            <div className = "cointainer">              {/* div para compreender todos os elementos, utilizei ela essencialmente para  */}
-                <div className = "produtos">             {/* "partir" a tela entre o descritivo dos produtos e o resumo do pedido */}
-                    <div className = "fotoproduto">
-                        <img src="/images/tenis.png" alt="tenis" className="tenis"/>
+    function handlePlus1() {
+        let qntd = quantity1;
+        qntd = qntd + 1;
+        setQuantity1(qntd);
+        setTotal(total + preco1);
+    }
+    function handlePlus2() {
+        let qntd = quantity2;
+        qntd = qntd + 1;
+        setQuantity2(qntd);
+        setTotal(total + preco2);
+    }
+    function handlePlus3() {
+        let qntd = quantity3;
+        qntd = qntd + 1;
+        setQuantity3(qntd);
+        setTotal(total + preco3);
+    }
+
+    function handleMinus1() {
+        let qntd = quantity1;
+        if(qntd>0){
+            qntd = qntd - 1;
+            setTotal(total - preco1);
+        }
+        setQuantity1(qntd);
+    }
+    function handleMinus2() {
+        let qntd = quantity2;
+        if(qntd>0){
+            qntd = qntd - 1;
+            setTotal(total - preco2);
+        }
+        setQuantity2(qntd);
+    }
+    function handleMinus3() {
+        let qntd = quantity3;
+        if(qntd>0){
+            qntd = qntd - 1;
+            setTotal(total - preco3);
+        }
+        setQuantity3(qntd);
+    }
+
+    return (
+        <div className="carrinho">
+            <div className="tituloCarrinho">Carrinho</div>
+            <div className="produtosCarrinho">
+                <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
+                <div className="anuncioProduto">
+                    <div className="tituloProduto">
+                        Camisa clássica do Morro do Filó
                     </div>
-                    <div className = "infos">                               
-                        <div className = "descritivo">
-                            <div className = "nomeproduto">{produtos}</div>               
-                            <div className = "detalhes">{tamanho}</div>   
+                    <div className="sobreProduto">
+                        <div className="qntdProduto">
+                            <div className="qntdIcon" onClick={handleMinus1}>
+                                <IconContext.Provider value={{ color: "#343434", size: "14px", className: "littleIcon"}}>
+                                    <BsDashSquare />
+                                </IconContext.Provider>
+                                <IconContext.Provider value={{ color: "#343434", size: "26px", className: "bigIcon"}}>
+                                    <BsDashSquare />
+                                </IconContext.Provider>
+                            </div>
+                            <div className="qntd">{quantity1}</div>
+                            <div className="qntdIcon" onClick={handlePlus1}>
+                                <IconContext.Provider value={{ color: "#343434", size: "26px", className: "bigIcon"}}>
+                                    <BsPlusSquare />
+                                </IconContext.Provider>
+                                <IconContext.Provider value={{ color: "#343434", size: "14px", className: "littleIcon"}}>
+                                    <BsPlusSquare />
+                                </IconContext.Provider>
+                            </div>
                         </div>
-                        <aside className = "preços">
-                            <div className = 'preço1'>{preço1}</div>
-                            <div className = 'preço2'>{preço2}</div>
-                        </aside>
-                        <div className = "deletebutton">
-                            <IconButton  aria-label="delete">
-                                {/* <DeleteIcon /> */}
-                            </IconButton>
-                        </div> 
-                    </div> 
-                </div>
-                <aside className = "finalização">                {/* div para o botão finalizar retirado de: https://www.fabriziovanmarciano.com/button-styles/  Button Style E*/}         
-                    <div class="button_cont" align="center">
-                        <a class="botaosty" href="pagamento" target="_blank" rel="nofollow noopener"    /* href é o redirecionamento, tem que criar uma página para pagamento */
-                            >FINALIZAR COMPRA
-                        </a>   
-                    </div> 
-                </aside>
-                <div className = "resumo">   
-                    {/* div para o resumo dos produtos: soma dos valores, desconto, valor entrega etc */}
+                        <div className="precoProduto">R$40</div> 
+                    </div>
                 </div>
             </div>
-        <form className = "cep">
-            {cep}
-            <div>
-                <TextField id="CEP" label="Digite seu CEP" variant="outlined"></TextField> 
-                <Button variant="contained" color="primary" size="medium">Calcular</Button>
+            <div className="produtosCarrinho">
+                <img src="/images/short1.jpg" alt="produto" className="imgProduto"/>
+                <div className="anuncioProduto">
+                    <div className="tituloProduto">
+                        Short para treino da Comunidade Helipa
+                    </div>
+                    <div className="sobreProduto">
+                        <div className="qntdProduto">
+                            <div className="qntdIcon" onClick={handleMinus2}>
+                                <IconContext.Provider value={{ color: "#343434", size: "14px", className: "littleIcon"}}>
+                                    <BsDashSquare />
+                                </IconContext.Provider>
+                                <IconContext.Provider value={{ color: "#343434", size: "26px", className: "bigIcon"}}>
+                                    <BsDashSquare />
+                                </IconContext.Provider>
+                            </div>
+                            <div className="qntd">{quantity2}</div>
+                            <div className="qntdIcon" onClick={handlePlus2}>
+                                <IconContext.Provider value={{ color: "#343434", size: "26px", className: "bigIcon"}}>
+                                    <BsPlusSquare />
+                                </IconContext.Provider>
+                                <IconContext.Provider value={{ color: "#343434", size: "14px", className: "littleIcon"}}>
+                                    <BsPlusSquare />
+                                </IconContext.Provider>
+                            </div>
+                        </div>
+                        <div className="precoProduto">R$60</div> 
+                    </div>
+                </div>
             </div>
-        </form>
-    </>
-  );
+            <div className="produtosCarrinho">
+                <img src="/images/tenis1.jpg" alt="produto" className="imgProduto"/>
+                <div className="anuncioProduto">
+                    <div className="tituloProduto">
+                        Tenis da Comunidade da Serra
+                    </div>
+                    <div className="sobreProduto">
+                        <div className="qntdProduto">
+                            <div className="qntdIcon" onClick={handleMinus3}>
+                                <IconContext.Provider value={{ color: "#343434", size: "14px", className: "littleIcon"}}>
+                                    <BsDashSquare />
+                                </IconContext.Provider>
+                                <IconContext.Provider value={{ color: "#343434", size: "26px", className: "bigIcon"}}>
+                                    <BsDashSquare />
+                                </IconContext.Provider>
+                            </div>
+                            <div className="qntd">{quantity3}</div>
+                            <div className="qntdIcon" onClick={handlePlus3}>
+                                <IconContext.Provider value={{ color: "#343434", size: "26px", className: "bigIcon"}}>
+                                    <BsPlusSquare />
+                                </IconContext.Provider>
+                                <IconContext.Provider value={{ color: "#343434", size: "14px", className: "littleIcon"}}>
+                                    <BsPlusSquare />
+                                </IconContext.Provider>
+                            </div>
+                        </div>
+                        <div className="precoProduto">R$190</div> 
+                    </div>
+                </div>
+            </div>
+            <div className="finalizacao">
+                <a className="finalButton" href="home" onClick={()=>alert("Compra realizada com sucesso!!")}>FINALIZAR COMPRA</a>
+                <div className="total">Total: R${total}</div>
+            </div>
+        </div>
+    );
 }
