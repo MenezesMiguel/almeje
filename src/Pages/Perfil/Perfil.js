@@ -1,6 +1,5 @@
-import { Link } from "@material-ui/core";
 import React from "react";
-import { ButtonGroup, Button, Col } from "react-bootstrap";
+import { ButtonGroup, Button } from "react-bootstrap";
 
 import "./Perfil.css";
 
