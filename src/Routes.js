@@ -23,7 +23,10 @@ const PrivateRoute = ({component: Component, ...rest}) => {
             isAuthenticated() ? (
                 <Component {...props} />
             ) : (
-                <Redirect to={{ pathname: "/login", state: { from: props.location } }}/>
+                <Redirect
+                    to={{ pathname: "/login", state: { from: props.location }}}
+                    onChange={alert("Você precisa estar logado para acessar seu carrinho")}
+                />
             )
         }
     />
