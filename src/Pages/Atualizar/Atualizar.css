@@ -1,0 +1,17 @@
+.geralAtualizar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(231, 102, 26, 0.19) ,rgba(255, 255, 255, 0) 10%);
+}
+.AtualizarCadastro{
+    font-family: 'Asap Condensed', sans-serif;     
+    font-weight: 700;
+    margin-top: 5%;
+    color: #F27934;
+    font-size: min(30px, 7.5vw);
+}
+.Formulario{
+    margin: 10px;
+}

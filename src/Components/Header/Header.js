@@ -20,7 +20,9 @@ function Header(props){
     let title;
     if(location.pathname === "/bio") title = "Quem nós somos"
     else if(location.pathname === "/comunidades") title = "Comunidades"
-    else if(location.pathname === "/login" || location.pathname === "/cadastro") title = "Bem vindo ao Atlas"
+    else if(location.pathname === "/login") title = "Bem vindo ao Atlas"
+    else if(location.pathname === "/cadastro") title = "Bem vindo ao Atlas"
+    else if(location.pathname === "/perfil") title = "Meu perfil"
     else title = "O melhor do Atlas"
 
     const handleClickMenu = (event) => {
