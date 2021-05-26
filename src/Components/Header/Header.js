@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { MdMenu } from "react-icons/md"
 import { IconContext } from "react-icons/lib";
 import { useHistory, useLocation } from "react-router";
-import { Link } from "react-router-dom";
 import "./Header.css"
 
 const styles = {
@@ -16,7 +15,6 @@ const styles = {
 
 function Header(props){
     const { classes } = props;
-    const history = useHistory();
     let location = useLocation();
     const [anchorEl, setAnchorEl] = useState(null);
     let title;
@@ -35,24 +33,19 @@ function Header(props){
         setAnchorEl(null);
     };
 
-    function handleClick(pathName){
-        history.push(pathName);
-        handleClose();
-    }
-
     return (
         <>
         <AppBar position="fixed">
             <Toolbar className="cabecalho">
                 <div className="logoDesk">
-                    <Link to="/home"><img src="/images/Logo.png" alt="logo" className="imglogo"/></Link>
+                    <a href="/home"><img src="/images/Logo.png" alt="logo" className="imglogo"/></a>
                     <img src="/images/Nome.png" alt="nome" className="imgnome"/>
                 </div>
-                <Link className="links" to="/bio">Quem Somos</Link>
-                <Link className="links" to="/produtos">Produtos</Link>
-                <Link className="links" to="/carrinho">Meu Carrinho</Link>
-                <Link className="links" to="/login">Meu Perfil</Link>
-                <Link to="/home"><img src="/images/Logo.png" alt="logo" className="imglogomobile"/></Link>
+                <a href="/bio" className="links">Quem Somos</a>
+                <a href="/produtos" className="links">Produtos</a>
+                <a href="/carrinho" className="links">Meu Carrinho</a>
+                <a href="/login" className="links">Meu Perfil</a>
+                <a href="/home" ><img src="/images/Logo.png" alt="logo" className="imglogomobile"/></a>
                 <h1 className="title">{title}</h1>
                 <div className="menu" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClickMenu}>
                     <IconContext.Provider value={{ color: "#343434", size: "2em"}}>
@@ -61,24 +54,24 @@ function Header(props){
                 </div>
                 <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
                     <MenuItem className={classes.menuItem}>
-                        <Link className="menuItem" to="/bio" onClick={handleClose}>
+                        <a className="menuItem" href="/bio" onClick={handleClose}>
                             Quem Somos
-                        </Link>
+                        </a>
                     </MenuItem>
                     <MenuItem className={classes.menuItem}>
-                        <Link className="menuItem" to="/produtos" onClick={handleClose}>
+                        <a className="menuItem" href="/produtos" onClick={handleClose}>
                             Produtos
-                        </Link>
+                        </a>
                     </MenuItem>
                     <MenuItem className={classes.menuItem}>
-                        <Link className="menuItem" to="/carrinho" onClick={handleClose}>
+                        <a className="menuItem" href="/carrinho" onClick={handleClose}>
                             Meu Carrinho
-                        </Link>
+                        </a>
                     </MenuItem>
                     <MenuItem className={classes.menuItem}>
-                        <Link className="menuItem" to="/login" onClick={handleClose}>
+                        <a className="menuItem" href="/login" onClick={handleClose}>
                             Meu Perfil
-                        </Link>
+                        </a>
                     </MenuItem>
                 </Menu>
             </Toolbar>

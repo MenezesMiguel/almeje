@@ -13,8 +13,8 @@ function Home(){
     }
     
     return (
-        <div className="home">
-                <Carousel interval={10000} className="carrossel" nextIcon={<span className="carousel-control-next-icon"/>}>
+        <div className="home" >
+                <Carousel interval={10000} id="carrossel" className="carrossel" nextIcon={<span className="carousel-control-next-icon"/>}>
                     <Carousel.Item>
                         <img
                         className="carrosselImageG"
@@ -60,7 +60,7 @@ function Home(){
                 </Carousel>
             <p className="subtitle">LANÇAMENTOS</p>
             <div className="topicos">
-                <div className="produto">
+                <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/calça1.png" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
@@ -74,7 +74,7 @@ function Home(){
                         impacto dele para essas pessoas.
                     </p>
                 </div>
-                <div className="produto">
+                <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/tenis1.jpg" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
@@ -90,7 +90,7 @@ function Home(){
             </div>
             <p className="subtitle">MAIS PROCURADOS</p>
             <div className="topicos">
-                <div className="produto">
+                <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/short1.jpg" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
@@ -105,7 +105,7 @@ function Home(){
                         impacto dele para essas pessoas.
                     </p>
                 </div>
-                <div className="produto">
+                <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/tenis2.jpg" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
@@ -121,7 +121,7 @@ function Home(){
             </div>
             <p className="subtitle">Promoções</p>
             <div className="topicos">
-                <div className="produto">
+                <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
@@ -134,7 +134,7 @@ function Home(){
                         pedindo ajuda na comunidade. Ao longo do trabalho, José se mostrou um ótimo product designer desenvolveu o projeto da camisa.
                     </p>
                 </div>
-                <div className="produto">
+                <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
                         <div className="anuncioProduto">
