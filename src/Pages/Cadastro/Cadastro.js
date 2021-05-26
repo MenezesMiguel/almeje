@@ -19,8 +19,19 @@ function Cadastro() {
   async function Cadastro(e) {
     e.preventDefault();
     try {
-      const response = await api.post('/cadastro', {nome, nascimento, cpf, email, password, endereco, cidade, estado, cep});
+      const response = await api.post("/cadastro", {
+        nome,
+        nascimento,
+        cpf,
+        email,
+        password,
+        endereco,
+        cidade,
+        estado,
+        cep,
+      });
       console.log(response);
+      alert("Cadastro efetuado com sucesso, por favor faça login!");
       history.push("login");
     } catch (error) {
       console.warn(error);
@@ -44,7 +55,7 @@ function Cadastro() {
           </Form.Group>
           <Form.Row>
             <Form.Group as={Col} controlId="nascimento">
-              <Form.Label>Data de Nascimento</Form.Label>
+              <Form.Label>Nascimento</Form.Label>
               <Form.Control
                 placeholder="DD/MM/AAAA"
                 onChange={(e) => setNascimento(e.target.value)}

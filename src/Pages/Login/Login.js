@@ -5,11 +5,6 @@ import { useHistory } from "react-router-dom";
 import api from "../../services/api"
 import { login } from "../../services/auth"
 
-const styles = {
-  classForm: {
-    width: "80%",
-  },
-};
 function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();

@@ -5,13 +5,14 @@ import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 import Cadastro from "./Pages/Cadastro";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
-import Bio from "./Pages/Bio"
+import Bio from "./Pages/Bio";
 import Perfil from "./Pages/Perfil";
-import Produtos from "./Pages/Produtos"
-import Carrinho from "./Pages/Carrinho"
-import Detalhes from "./Pages/Detalhes"
-import Header from "./Components/Header"
-import Footer from "./Components/Footer"
+import Produtos from "./Pages/Produtos";
+import Carrinho from "./Pages/Carrinho";
+import Detalhes from "./Pages/Detalhes";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Atualizar from "./Pages/Atualizar";
 import { isAuthenticated } from "./services/auth";
 //------------------------------------------------------------------
 
@@ -31,7 +32,7 @@ const PrivateRouteCarrinho = ({component: Component, ...rest}) => {
         }
     />
     )
-}
+};
 
 function Routes(){
     return(
@@ -44,22 +45,23 @@ function Routes(){
 }
 
 function header() {
-    return (
-        <Header>
-            <Switch>
-                <Route path = "/login" component={Login}/>
-                <Route path = "/home" component={Home}/>
-                <Route path = "/cadastro" component={Cadastro}/>
-                <Route path = "/bio" component={Bio}/>
-                <Route path = "/perfil" component={Perfil}/>
-                <Route path = "/Produtos" component={Produtos}/>
-                <PrivateRouteCarrinho path = "/carrinho" component={Carrinho}/>
-                <Route path = "/detalhes" component={Detalhes}/>
-                <Route component={()=> <Redirect to="/home"/> } />
-            </Switch>
-            <Footer/>
-        </Header>
-    );
+  return (
+    <Header>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/atualizar" component={Atualizar} />
+        <Route path="/home" component={Home} />
+        <Route path="/cadastro" component={Cadastro} />
+        <Route path="/bio" component={Bio} />
+        <Route path="/perfil" component={Perfil} />
+        <Route path="/Produtos" component={Produtos} />
+        <PrivateRoute path="/carrinho" component={Carrinho} />
+        <Route path="/detalhes" component={Detalhes} />
+        <Route component={() => <Redirect to="/home" />} />
+      </Switch>
+      <Footer />
+    </Header>
+  );
 }
 
 export default Routes;
