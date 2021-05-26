@@ -2,7 +2,7 @@ import { AppBar, Menu, MenuItem, Toolbar, withStyles } from "@material-ui/core";
 import React, { useState } from "react";
 import { MdMenu } from "react-icons/md"
 import { IconContext } from "react-icons/lib";
-import { useHistory, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import "./Header.css"
 
 const styles = {

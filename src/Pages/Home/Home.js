@@ -63,9 +63,9 @@ function Home(){
                 <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/calça1.png" alt="produto" className="imgProduto"/>
-                        <div className="anuncioProduto">
+                        <div>
                         <p className="tituloAnuncio">CONHEÇA A NOVA CALÇA DA COMUNIDADE DA SERRA</p>
-                        <p className="preco">Valor  R$99,99</p>
+                        <p className="preco">Valor  R$100</p>
                         </div>
                     </div>
                     <p className="descricao">
@@ -77,9 +77,9 @@ function Home(){
                 <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/tenis1.jpg" alt="produto" className="imgProduto"/>
-                        <div className="anuncioProduto">
+                        <div>
                         <p className="tituloAnuncio">CONHEÇA O NOVO TÊNIS DA COMUNIDADE DA SERRA</p>
-                        <p className="preco">Valor R$189,99</p>
+                        <p className="preco">Valor R$190</p>
                         </div>
                     </div>
                     <p className="descricao">
@@ -93,9 +93,9 @@ function Home(){
                 <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/short1.jpg" alt="produto" className="imgProduto"/>
-                        <div className="anuncioProduto">
+                        <div>
                         <p className="tituloAnuncio">SHORTS PARA TREINO DA COMUNIDADE HELIPA</p>
-                        <p className="preco">Por apenas R$59,99</p>
+                        <p className="preco">Por apenas R$60</p>
                         </div>
                     </div>
                     <p className="descricao">
@@ -108,9 +108,9 @@ function Home(){
                 <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/tenis2.jpg" alt="produto" className="imgProduto"/>
-                        <div className="anuncioProduto">
+                        <div>
                         <p className="tituloAnuncio">TÊNIS 12 MOLAS DA COMUNIDADE ROCINHA</p>
-                        <p className="preco">valor R$189,99</p>
+                        <p className="preco">valor R$190</p>
                         </div>
                     </div>
                     <p className="descricao">
@@ -119,14 +119,14 @@ function Home(){
                     </p>
                 </div>
             </div>
-            <p className="subtitle">Promoções</p>
+            <p className="subtitle">PROMOÇÕES</p>
             <div className="topicos">
                 <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/CamisaDestaque.png" alt="produto" className="imgProduto"/>
-                        <div className="anuncioProduto">
+                        <div>
                         <p className="tituloAnuncio">CAMISA CLÁSSICA DO MORRO DO FILÓ</p>
-                        <p className="preco">De R$109,99<br />Por apenas R$39,99</p>
+                        <p className="preco">De R$110<br />Por apenas R$40</p>
                         </div>
                     </div>
                     <p className="descricao">
@@ -137,9 +137,9 @@ function Home(){
                 <div className="produto" onClick={()=>handleClick("/carrinho")}>
                     <div className="titulo">
                         <img src="/images/TenisDestaque.png" alt="produto" className="imgProduto"/>
-                        <div className="anuncioProduto">
+                        <div>
                         <p className="tituloAnuncio">CAMISA CLÁSSICA DA VILA FRANÇA</p>
-                        <p className="preco">De R$159,99<br />Por apenas R$99,99</p>
+                        <p className="preco">De R$160<br />Por apenas R$100</p>
                         </div>
                     </div>
                     <p className="descricao">

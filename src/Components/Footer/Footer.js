@@ -38,7 +38,7 @@ function Footer() {
             <div className="quickLinks">
                 <p className="principal">Acesso rápido</p>
                 <ul>
-                    <li><a className="link" href="/home" targe="carrossel">Home</a></li>
+                    <li><a className="link" href="/home">Home</a></li>
                     <li><a className="link" href="/login">Login</a></li>
                     <li><a className="link" href="/produtos">Produtos</a></li>
                     <li><a className="link" href="/bio">Quem Somos</a></li>

@@ -1,4 +1,5 @@
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import React, { Component } from "react";
+import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
 //Paginas do site---------------------------------------------------
 import Cadastro from "./Pages/Cadastro";
@@ -15,8 +16,8 @@ import Atualizar from "./Pages/Atualizar";
 import { isAuthenticated } from "./services/auth";
 //------------------------------------------------------------------
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  return (
+const PrivateRouteCarrinho = ({component: Component, ...rest}) => {
+    return (
     <Route
         {...rest}
         render={(props) =>
@@ -25,22 +26,22 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
             ) : (
                 <Redirect
                     to={{ pathname: "/login", state: { from: props.location }}}
-                    onChange={alert("Você precisa estar logado para acessar seu carrinho")}
+                    onChange={alert("Faça login antes de começar a comprar.")}
                 />
             )
         }
     />
-  );
+    )
 };
 
-function Routes() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={header} />
-      </Switch>
-    </BrowserRouter>
-  );
+function Routes(){
+    return(
+        <BrowserRouter>
+            <Switch>
+                <Route path = "/" component={header}/>
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 function header() {
