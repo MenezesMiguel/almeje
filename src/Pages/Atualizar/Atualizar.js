@@ -37,7 +37,7 @@ function Atualizar() {
   }
 
   return (
-    <div className="geralPerfil">
+    <div className="geralAtualizar">
       <p className="frase">Meu perfil</p>
       <div className="Formulario">
         <p className="AtualizarCadastro">Atualizar Informacoes Pessoais</p>

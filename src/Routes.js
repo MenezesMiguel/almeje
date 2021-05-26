@@ -46,7 +46,7 @@ function header() {
   return (
     <Header>
       <Switch>
-        <Route path="/login" component={Login} />{" "}
+        <Route path="/login" component={Login} />
         <Route path="/atualizar" component={Atualizar} />
         <Route path="/home" component={Home} />
         <Route path="/cadastro" component={Cadastro} />
