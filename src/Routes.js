@@ -34,6 +34,40 @@ const PrivateRouteCarrinho = ({component: Component, ...rest}) => {
     )
 };
 
+const PrivateRouteLogin = ({component: Component, ...rest}) => {
+    return (
+    <Route
+        {...rest}
+        render={(props) =>
+            isAuthenticated() ? (
+                <Redirect
+                    to={{ pathname: "/perfil", state: { from: props.location }}}
+                    />
+            ) : (
+                <Component {...props} />
+            )
+        }
+    />
+    )
+};
+
+const PrivateRoutePerfil = ({component: Component, ...rest}) => {
+    return (
+    <Route
+        {...rest}
+        render={(props) =>
+            isAuthenticated() ? (
+                <Component {...props} />
+            ) : (
+                <Redirect
+                    to={{ pathname: "/login", state: { from: props.location }}}
+                    />
+            )
+        }
+    />
+    )
+};
+
 function Routes(){
     return(
         <BrowserRouter>
@@ -48,12 +82,12 @@ function header() {
   return (
     <Header>
       <Switch>
-        <Route path="/login" component={Login} />
+        <PrivateRouteLogin path="/login" component={Login} />
         <Route path="/atualizar" component={Atualizar} />
         <Route path="/home" component={Home} />
-        <Route path="/cadastro" component={Cadastro} />
+        <PrivateRouteLogin path="/cadastro" component={Cadastro} />
         <Route path="/bio" component={Bio} />
-        <Route path="/perfil" component={Perfil} />
+        <PrivateRoutePerfil path="/perfil" component={Perfil} />
         <Route path="/Produtos" component={Produtos} />
         <PrivateRouteCarrinho path="/carrinho" component={Carrinho} />
         <Route path="/detalhes" component={Detalhes} />
