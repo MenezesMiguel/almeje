@@ -17,6 +17,7 @@
     font-family: 'Asap Condensed', sans-serif;
     font-size: 60px;
     padding-bottom: 50px;
+    color: #f27934;
 }
 .QSBaixo{
     display: flex;
@@ -63,6 +64,7 @@ text-align: justify;
     padding-left: 20px;
     text-transform: uppercase;
     text-align: center;
+    color: #f27934;
 }
 .comunidadesBase{
     display: flex;
@@ -83,6 +85,7 @@ text-align: justify;
     padding-left: 20px;
     justify-items: center;
     text-transform: uppercase;
+    color: #f27934;
 }
 .comunidadesSobre{
     font-size: 25px;

@@ -1,0 +1,21 @@
+.baseProdutos{
+    background-image: linear-gradient(
+        rgba(231, 102, 26, 0.19),
+        rgba(226, 223, 223, 0.315) 10%);
+
+        width: 100%;
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(autofill, minmax(1fr) );
+}
+
+.headerLocal{
+    background-image: linear-gradient(
+        rgba(231, 102, 26, 0.19),
+        rgba(226, 223, 223, 0.315) 10%);
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 60px;
+    color: #f27934;
+    text-align: center;
+}
