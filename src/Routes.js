@@ -55,7 +55,7 @@ function header() {
         <Route path="/bio" component={Bio} />
         <Route path="/perfil" component={Perfil} />
         <Route path="/Produtos" component={Produtos} />
-        <PrivateRoute path="/carrinho" component={Carrinho} />
+        <PrivateRouteCarrinho path="/carrinho" component={Carrinho} />
         <Route path="/detalhes" component={Detalhes} />
         <Route component={() => <Redirect to="/home" />} />
       </Switch>
