@@ -11,6 +11,7 @@ import Carrinho from "./Pages/Carrinho";
 import Detalhes from "./Pages/Detalhes";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Atualizar from "./Pages/Atualizar";
 import { isAuthenticated } from "./services/auth";
 //------------------------------------------------------------------
 
@@ -45,7 +46,8 @@ function header() {
   return (
     <Header>
       <Switch>
-        <Route path="/login" component={Login} />
+        <Route path="/login" component={Login} />{" "}
+        <Route path="/atualizar" component={Atualizar} />
         <Route path="/home" component={Home} />
         <Route path="/cadastro" component={Cadastro} />
         <Route path="/bio" component={Bio} />
