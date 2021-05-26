@@ -16,20 +16,10 @@ function Perfil() {
           </Form.Group>
           <Form.Row>
             <Form.Group as={Col} controlId="nascimento">
-              <Form.Label>Nascimento</Form.Label>
+              <Form.Label>Data deNascimento</Form.Label>
               <Form.Control placeholder="DD/MM/AAAA" />
             </Form.Group>
-            <Form.Group as={Col} controlId="cpf">
-              <Form.Label>CPF</Form.Label>
-              <Form.Control placeholder="123.456.789-00" />
-            </Form.Group>
           </Form.Row>
-          <Button variant="primary" type="submit">
-            Atualizar
-          </Button>
-        </Form>
-        <p className="AtualizarCadastro">Cadastrar endereco</p>
-        <Form>
           <Form.Group controlId="formGridAddress1">
             <Form.Label>Endereco</Form.Label>
             <Form.Control placeholder="Rua abcd, 123" />
