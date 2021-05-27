@@ -19,7 +19,7 @@ function Cadastro() {
   async function Cadastro(e) {
     e.preventDefault();
     try {
-      const response = await api.post("/cadastro", {
+      const response = await api.post("/users", {
         nome,
         nascimento,
         cpf,
