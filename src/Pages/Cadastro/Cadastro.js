@@ -35,7 +35,7 @@ function Cadastro() {
       history.push("login");
     } catch (error) {
       console.warn(error);
-      alert(error.message);
+      alert("Dados inválidos");
     }
   }
 
@@ -65,6 +65,9 @@ function Cadastro() {
               <Form.Label>CPF</Form.Label>
               <Form.Control
                 placeholder="123.456.789-00"
+                pattern="[0-9]$"
+                required
+                title="Digite um CPF válido"
                 onChange={(e) => setCpf(e.target.value)}
               />
             </Form.Group>
