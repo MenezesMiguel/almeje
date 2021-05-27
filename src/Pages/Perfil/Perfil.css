@@ -49,6 +49,12 @@ justify-content: center;
     border-color: #ec0a0a !important;
     color: cornsilk !important;
 }
+.dados {
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
 @media (max-width: 950px){
     .userInfo{
         display: flex;
