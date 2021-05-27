@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
 
 //Paginas do site---------------------------------------------------
@@ -83,7 +83,7 @@ function header() {
     <Header>
       <Switch>
         <PrivateRouteLogin path="/login" component={Login} />
-        <Route path="/atualizar" component={Atualizar} />
+        <PrivateRoutePerfil path="/atualizar" component={Atualizar} />
         <Route path="/home" component={Home} />
         <PrivateRouteLogin path="/cadastro" component={Cadastro} />
         <Route path="/bio" component={Bio} />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import api from "../../services/api";
+import { getUserID } from "../../services/auth";
 
 import "./Atualizar.css";
 
@@ -16,24 +17,18 @@ function Atualizar() {
   const [estado, setEstado] = useState();
   const [cep, setCep] = useState();
   
-  async function Atualizar(e) {
-    e.preventDefault();
-    try {
-      const response = await api.put("/atualizar", {
-        nome,
-        nascimento,
-        endereco,
-        cidade,
-        estado,
-        cep,
-      });
-      console.log(response);
-      alert("Cadastro atualizado com sucesso, por favor faça login!");
-      history.push("perfil");
-    } catch (error) {
-      console.warn(error);
-      alert(error.message);
-    }
+  async function Atualizar() {
+    const user_id = getUserID();
+    const response = await api.put(`/users/${user_id}`, {
+      nome,
+      nascimento,
+      endereco,
+      cidade,
+      estado,
+      cep,
+    });
+    alert("Dados atualizados!");
+    history.push("perfil");
   }
 
   return (

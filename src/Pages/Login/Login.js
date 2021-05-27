@@ -15,13 +15,14 @@ function Login() {
     try {
       const response = await api.post("/login", {email, password});
       alert("Bem vindo "+ response.data.user.nome +"!");
-      login(response.data.accessToken);
+      login(response.data.accessToken, response.data.user.user_id);
       history.push("home");
     } catch (error) {
       console.warn(error);
-      alert(error.message);
+      alert("Credenciais Inválidas");
     }
   }
+
   return (
     <div className="geral">
       <p className="frase" color="orange">
