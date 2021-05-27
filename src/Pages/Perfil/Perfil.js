@@ -24,8 +24,11 @@ function Perfil() {
   useEffect(()=>{
     getData();
   },[]);
-  async function deletar() {
-    
+  async function Deletar() {
+    const response = await api.delete(`/users/${user_id}`);
+    logout();
+    alert("Conta deletada com sucesso!!");
+    history.push("/login");
   }
   return (
     <div className="geralPerfil">
@@ -39,7 +42,7 @@ function Perfil() {
             <Button variant="secondary" onClick={Logout}>
               Logout
             </Button>
-            <Button variant="terciary">
+            <Button variant="terciary" onClick={Deletar}>
               Deletar Usuario
             </Button>
           </ButtonGroup>

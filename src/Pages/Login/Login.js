@@ -19,10 +19,10 @@ function Login() {
       history.push("home");
     } catch (error) {
       console.warn(error);
-      alert(error.message);
+      alert("Credenciais Inválidas");
     }
   }
-  
+
   return (
     <div className="geral">
       <p className="frase" color="orange">
